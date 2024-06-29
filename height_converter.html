@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Height Converter</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(20deg, rgb(215, 74, 4), rgb(241, 7, 73));
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2em;
+        background-color: white;
+        gap: 1em;
+        padding: 4em 2em;
+        border-radius: 1em;
+        box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.4);
+      }
+      h1 {
+        font-size: 2em;
+      }
+      .row {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+      input {
+        font-size: 1em;
+        padding: 0.5em;
+        border-radius: 0.5em;
+      }
+      button {
+        padding: 0.8em 1em;
+        font-size: 1em;
+        border-radius: 0.5em;
+        font-weight: 600;
+        background-color: #fc5705;
+        color: antiquewhite;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+      }
+      button:hover {
+        transform: scale(1.02);
+      }
+      .results {
+        font-size: 2em;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="calculator">
+      <h1>Height Converter</h1>
+      <div class="row">
+        <label for="feet">Feet</label>
+        <input id="feet" />
+      </div>
+      <div class="row">
+        <label for="inches">Inches</label>
+        <input id="inches" />
+      </div>
+      <div class="row">
+        <button>Convert to Cm</button>
+      </div>
+      <div class="results"></div>
+    </form>
+
+    <script>
+      const form = document.querySelector("form");
+      form.addEventListener("submit", function (e) {
+        let feetInput = document.querySelector("#feet");
+        let inchesInput = document.querySelector("#inches");
+        const results = document.querySelector(".results");
+        e.preventDefault();
+        let feet = parseInt(feetInput.value);
+        let inches = parseInt(inchesInput.value);
+        if (isNaN(feet) || isNaN(inches)) {
+          results.textContent = "Please enter a valid number!";
+        } else if (feet < 0) {
+          results.textContent = "Please enter a feet value bigger than 0";
+        } else if (inches < 0 || inches >= 12) {
+          results.textContent = "Please enter an inch value between 0 and 12.";
+        } else {
+          let totalInches = feet * 12 + inches;
+          let cm = totalInches * 2.54;
+          results.textContent = `${cm.toFixed(2)}cm`;
+          feetInput.value = "";
+          inchesInput.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>
