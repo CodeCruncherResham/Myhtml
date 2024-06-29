@@ -1,0 +1,158 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Tribute to Mother Teresa</title>
+     <style>
+         /* Reset CSS */
+         * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+         }
+ 
+         body {
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             background-color: #f9f9f9;
+             color: #333;
+             line-height: 1.6;
+         }
+ 
+         header {
+             text-align: center;
+             background-color: #edc126;
+             padding: 20px 0;
+             margin-bottom: 20px;
+         }
+ 
+         header h1 {
+             font-size: 42px;
+             margin-bottom: 10px;
+             color: #fff;
+         }
+ 
+         header p {
+             font-size: 18px;
+             color: #fff;
+             margin-bottom: 20px;
+         }
+ 
+         .container {
+             max-width: 800px;
+             margin: 0 auto;
+             padding: 0 20px;
+         }
+ 
+         .tribute-section {
+             background-color: #fff;
+             padding: 30px;
+             margin-bottom: 30px;
+             border-radius: 8px;
+             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+             transition: transform 0.3s ease;
+         }
+ 
+         .tribute-section:hover {
+             transform: translateY(-5px);
+         }
+ 
+         .tribute-section img {
+             width: 500px;
+             height: 250px;
+             border-radius: 8px;
+             margin-bottom: 20px;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+             display: block;
+             margin-left: auto;
+             margin-right: auto;
+         }
+ 
+         .tribute-section h2 {
+             font-size: 28px;
+             margin-bottom: 15px;
+             color: #333;
+         }
+ 
+         .tribute-section p {
+             font-size: 16px;
+             margin-bottom: 20px;
+             color: #555;
+         }
+ 
+         footer {
+             text-align: center;
+             background-color: #333;
+             color: #fff;
+             padding: 20px 0;
+             border-top: 2px solid #edc126;
+         }
+ 
+         footer p {
+             font-size: 14px;
+         }
+ 
+         /* Responsive */
+         @media (max-width: 768px) {
+             .container {
+                 padding: 0 10px;
+             }
+ 
+             header h1 {
+                 font-size: 36px;
+             }
+ 
+             header p {
+                 font-size: 16px;
+             }
+ 
+             .tribute-section h2 {
+                 font-size: 24px;
+             }
+ 
+             .tribute-section p {
+                 font-size: 14px;
+             }
+ 
+             .tribute-section img {
+                 width: 100%;
+                 height: auto;
+             }
+         }
+     </style>
+ </head>
+ <body>
+ 
+ <header>
+     <h1>Tribute to Mother Teresa</h1>
+     <p>"Not all of us can do great things. But we can do small things with great love." - Mother Teresa</p>
+ </header>
+ 
+ <div class="container">
+ 
+     <div class="tribute-section">
+         <img src="motherteresa.jpg" alt="Mother Teresa">
+         <h2>Who was Mother Teresa?</h2>
+         <p>Mother Teresa, known in the Roman Catholic Church as Saint Teresa of Calcutta, was an Albanian-Indian Roman Catholic nun and missionary. She founded the Missionaries of Charity, a religious congregation devoted to helping those in need.</p>
+     </div>
+ 
+     <div class="tribute-section">
+         <h2>Her Contributions</h2>
+         <p>Mother Teresa dedicated her life to serving the poorest of the poor in the slums of Calcutta, India. She provided food, shelter, and medical care to those in need, and her work inspired countless others to follow in her footsteps.</p>
+         <p>She received numerous awards for her humanitarian work, including the Nobel Peace Prize in 1979.</p>
+     </div>
+ 
+     <div class="tribute-section">
+         <h2>Remembering Her Legacy</h2>
+         <p>Mother Teresa's legacy continues to inspire people around the world to help those less fortunate. Her selfless dedication to serving others serves as a reminder of the power of compassion and love.</p>
+     </div>
+ 
+ </div>
+ 
+ <footer>
+     <p>© 2023 Tribute to Mother Teresa. All rights reserved.</p>
+ </footer>
+ 
+ </body>
+ </html>
+ 
