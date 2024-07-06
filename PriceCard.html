@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Card Table</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f8f8f8;
+        }
+
+        .price-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .price-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+        }
+
+        .price-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .price-body {
+            padding: 20px;
+        }
+
+        .price-list {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .price-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .price-list li:last-child {
+            border-bottom: none;
+        }
+
+        .price-list .highlight {
+            font-weight: bold;
+        }
+
+        .price-footer {
+            background-color: #f0f0f0;
+            padding: 15px;
+            font-size: 0.9rem;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="price-card">
+        <div class="price-header">
+            <h2>Basic Plan</h2>
+        </div>
+        <div class="price-body">
+            <ul class="price-list">
+                <li><span class="highlight">Price:</span> $9.99 / month</li>
+                <li>Storage: 10GB</li>
+                <li>Email accounts: 1</li>
+                <li>Support: Basic</li>
+            </ul>
+        </div>
+        <div class="price-footer">
+            <button>Buy Now</button>
+        </div>
+    </div>
+
+    <div class="price-card">
+        <div class="price-header">
+            <h2>Standard Plan</h2>
+        </div>
+        <div class="price-body">
+            <ul class="price-list">
+                <li><span class="highlight">Price:</span> $19.99 / month</li>
+                <li>Storage: 50GB</li>
+                <li>Email accounts: 5</li>
+                <li>Support: Priority</li>
+            </ul>
+        </div>
+        <div class="price-footer">
+            <button>Buy Now</button>
+        </div>
+    </div>
+
+    <div class="price-card">
+        <div class="price-header">
+            <h2>Premium Plan</h2>
+        </div>
+        <div class="price-body">
+            <ul class="price-list">
+                <li><span class="highlight">Price:</span> $29.99 / month</li>
+                <li>Storage: 100GB</li>
+                <li>Email accounts: 10</li>
+                <li>Support: 24/7</li>
+            </ul>
+        </div>
+        <div class="price-footer">
+            <button>Buy Now</button>
+        </div>
+    </div>
+</body>
+</html>
