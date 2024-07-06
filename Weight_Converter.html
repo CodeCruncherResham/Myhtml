@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right top, #cfd9df, #e2ebf0);
+            background-size: cover;
+        }
+
+        .converter {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: calc(100% - 12px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        .output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        .convert-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .convert-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="converter">
+        <h1>Weight Converter</h1>
+
+        <div class="input-group">
+            <label for="inputWeight">Enter Weight:</label>
+            <input type="number" id="inputWeight" placeholder="Enter weight..." step="any" required>
+        </div>
+
+        <div class="input-group">
+            <label for="fromUnit">From:</label>
+            <select id="fromUnit">
+                <option value="kg">Kilogram (kg)</option>
+                <option value="g">Gram (g)</option>
+                <option value="lb">Pound (lb)</option>
+                <option value="oz">Ounce (oz)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="toUnit">To:</label>
+            <select id="toUnit">
+                <option value="kg">Kilogram (kg)</option>
+                <option value="g">Gram (g)</option>
+                <option value="lb">Pound (lb)</option>
+                <option value="oz">Ounce (oz)</option>
+            </select>
+        </div>
+
+        <button class="convert-btn" onclick="convertWeight()">Convert</button>
+
+        <div class="output" id="outputResult"></div>
+    </div>
+
+    <script>
+        function convertWeight() {
+            // Get input values
+            var inputWeight = parseFloat(document.getElementById('inputWeight').value);
+            var fromUnit = document.getElementById('fromUnit').value;
+            var toUnit = document.getElementById('toUnit').value;
+
+            // Define conversion factors
+            var factors = {
+                kg: {
+                    kg: 1,
+                    g: 1000,
+                    lb: 2.20462,
+                    oz: 35.274
+                },
+                g: {
+                    kg: 0.001,
+                    g: 1,
+                    lb: 0.00220462,
+                    oz: 0.035274
+                },
+                lb: {
+                    kg: 0.453592,
+                    g: 453.592,
+                    lb: 1,
+                    oz: 16
+                },
+                oz: {
+                    kg: 0.0283495,
+                    g: 28.3495,
+                    lb: 0.0625,
+                    oz: 1
+                }
+            };
+
+            // Perform conversion
+            var result = inputWeight * factors[fromUnit][toUnit];
+
+            // Display result
+            document.getElementById('outputResult').innerHTML = inputWeight + ' ' + fromUnit + ' = ' + result.toFixed(4) + ' ' + toUnit;
+        }
+    </script>
+
+</body>
+
+</html>
