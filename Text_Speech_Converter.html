@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-to-Speech Converter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #f8b4f5, #c5e7f2);
+        }
+
+        .converter {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #ff6f61;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .input-group textarea {
+            width: calc(100% - 12px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: #333;
+            background-color: #f9f9f9;
+            resize: none;
+            height: 100px;
+        }
+
+        .convert-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .convert-btn:hover {
+            background-color: #e86153;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            color: #333;
+            white-space: pre-wrap;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="converter">
+        <h1>Text-to-Speech Converter</h1>
+
+        <div class="input-group">
+            <label for="inputText">Enter Text:</label>
+            <textarea id="inputText" placeholder="Enter text to convert..." required></textarea>
+        </div>
+
+        <button class="convert-btn" onclick="convertTextToSpeech()">Convert to Speech</button>
+
+        <div class="output" id="outputSpeech"></div>
+    </div>
+
+    <script>
+        function convertTextToSpeech() {
+            var inputText = document.getElementById('inputText').value;
+
+            // Create speech synthesis utterance
+            var utterance = new SpeechSynthesisUtterance(inputText);
+            utterance.lang = 'en-US';
+
+            // Speech synthesis callback
+            utterance.onend = function () {
+                console.log('Speech synthesis complete');
+            };
+
+            // Error handling
+            utterance.onerror = function (err) {
+                console.error('Speech synthesis error:', err);
+            };
+
+            // Start speech synthesis
+            window.speechSynthesis.speak(utterance);
+
+            // Display output
+            document.getElementById('outputSpeech').textContent = inputText;
+        }
+    </script>
+
+</body>
+
+</html>
