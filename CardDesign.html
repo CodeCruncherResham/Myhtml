@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herb Card Design</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        .container h4 {
+            margin: 0 0 10px;
+        }
+
+        .container p {
+            color: #757575;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h1 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Page Title -->
+    <h1>Herb Card Design</h1>
+
+    <!-- Herb Card: Aloe Vera -->
+    <div class="card">
+        <img src="/Saved Pictures/alovera.jpg" alt="Aloe Vera">
+        <div class="container">
+            <h4><b>Aloe Vera</b></h4>
+            <p>Aloe Vera is a succulent plant known for its medicinal properties. The gel from its leaves is often used to treat burns, skin conditions, and has various health benefits when consumed.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <!-- Herb Card: Basil -->
+    <div class="card">
+        <img src="/Saved Pictures/basil.jpg" alt="Basil">
+        <div class="container">
+            <h4><b>Basil</b></h4>
+            <p>Basil is a fragrant herb commonly used in cooking, particularly in Italian cuisine. It has a sweet, peppery flavor and is a key ingredient in pesto sauce.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <!-- Herb Card: Rosemary -->
+    <div class="card">
+        <img src="/Saved Pictures/rosemary.jpg" alt="Rosemary">
+        <div class="container">
+            <h4><b>Rosemary</b></h4>
+            <p>Rosemary is an evergreen herb with needle-like leaves. It is used as a culinary herb, particularly in Mediterranean cuisine, and is known for its aromatic and flavorful properties.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <!-- Herb Card: Lavender -->
+    <div class="card">
+        <img src="/Saved Pictures/lavender.jpg" alt="Lavender">
+        <div class="container">
+            <h4><b>Lavender</b></h4>
+            <p>Lavender is a flowering plant known for its aromatic purple flowers. It is used in aromatherapy, perfumes, and for its calming and relaxing properties.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+</html>
