@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Card Design</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .article-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .article-card:hover {
+            transform: scale(1.05);
+        }
+
+        .article-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .article-container {
+            padding: 16px;
+        }
+
+        .article-container h4 {
+            margin: 10px 0;
+        }
+
+        .article-container p {
+            color: #757575;
+            margin: 10px 0;
+        }
+
+        .article-container button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .article-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="article-card">
+        <img src="/Saved Pictures/htcs.jpg" alt="Article Image">
+        <div class="article-container">
+            <h4><b>Understanding the Basics of HTML and CSS</b></h4>
+            <p>HTML and CSS are the foundational technologies for building web pages. This article explains the core concepts and how to get started.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <div class="article-card">
+        <img src="/Saved Pictures/js.jpg" alt="Article Image">
+        <div class="article-container">
+            <h4><b>Exploring JavaScript: The Language of the Web</b></h4>
+            <p>JavaScript adds interactivity to your web pages. Learn about the basics of JavaScript and how it enhances user experience on the web.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <div class="article-card">
+        <img src="/Saved Pictures/responsive.jpg" alt="Article Image">
+        <div class="article-container">
+            <h4><b>Responsive Design: Making Your Site Mobile-Friendly</b></h4>
+            <p>Responsive design ensures your website looks great on all devices. Discover the techniques to achieve responsive layouts.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <div class="article-card">
+        <img src="/Saved Pictures/cssflex.jpg" alt="Article Image">
+        <div class="article-container">
+            <h4><b>CSS Flexbox: A Modern Layout Tool</b></h4>
+            <p>Flexbox is a powerful layout module in CSS. This article covers the basics of Flexbox and how to create flexible, responsive layouts.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+</html>
