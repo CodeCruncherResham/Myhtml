@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Blog Card Design</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f8f8;
+        }
+
+        .blog-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .blog-card:hover {
+            transform: scale(1.05);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-container {
+            padding: 16px;
+        }
+
+        .blog-container h4 {
+            margin: 10px 0;
+        }
+
+        .blog-container p {
+            color: #757575;
+            margin: 10px 0;
+        }
+
+        .blog-container .author {
+            color: #999;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .blog-container button {
+            background-color: #FF6347;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .blog-container button:hover {
+            background-color: #FF4500;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="blog-card">
+        <img src="/Saved Pictures/cuisine.jpg" alt="Blog Image">
+        <div class="blog-container">
+            <h4><b>Exploring Italian Cuisine</b></h4>
+            <p>Join us as we dive into the rich and flavorful world of Italian cuisine, where pasta, pizza, and wine reign supreme.</p>
+            <p class="author">by John Doe</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <div class="blog-card">
+        <img src="/Saved Pictures/asian.jpg" alt="Blog Image">
+        <div class="blog-container">
+            <h4><b>Best Street Foods in Asia</b></h4>
+            <p>Discover the best street foods across Asia, from the bustling markets of Bangkok to the night markets of Taiwan.</p>
+            <p class="author">by Jane Smith</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <div class="blog-card">
+        <img src="/Saved Pictures/vegan.jpg" alt="Blog Image">
+        <div class="blog-container">
+            <h4><b>Vegan Delights</b></h4>
+            <p>Explore a variety of delicious vegan recipes that will satisfy your taste buds and inspire your cooking.</p>
+            <p class="author">by Alex Brown</p>
+            <button>Read More</button>
+        </div>
+    </div>
+
+    <div class="blog-card">
+        <img src="/Saved Pictures/vine.jpg" alt="Blog Image">
+        <div class="blog-container">
+            <h4><b>Wine Tasting Tips</b></h4>
+            <p>Enhance your wine tasting experience with our expert tips on how to taste and appreciate different wines.</p>
+            <p class="author">by Emily White</p>
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+</html>
