@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Container CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Alfa Slab One', cursive;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #a8a8a8;
+            min-height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 30px;
+            gap: 20px;
+        }
+        .card {
+            width: 300px;
+            background: #f0f0f0;
+            padding: 20px 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card .imgbx {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card .imgbx img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card .imgbx:hover img {
+            transform: scale(1.1);
+        }
+        .card h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .card p {
+            font-size: 16px;
+            color: #666;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="imgbx">
+               <a href="#">
+                <img src="Saved Pictures/shrimp.jpg" alt="Baked Feta with Shrimp">
+               </a>
+            </div>
+            <h2>Baked Feta with Shrimp</h2>
+            <p>Creamy, tangy, cheesy, and packed with extra herbs and perfectly cooked shrimp, this version of baked feta pasta is truly next level and totally worth the hype.</p>
+        </div>
+
+        <div class="card">
+            <div class="imgbx">
+               <a href="#">
+                <img src="Saved Pictures/roastedgarlic.jpg" alt="Roasted Garlic Butter Parmesan Potatoes">
+               </a>
+            </div>
+            <h2>Roasted Garlic Butter Parmesan Potatoes</h2>
+            <p>Deliciously crispy roasted potatoes with garlic, butter, and parmesan cheese. Perfect as a side dish or a savory snack.</p>
+        </div>
+
+        <div class="card">
+            <div class="imgbx">
+               <a href="#">
+                <img src="Saved Pictures/mangorice.jpg" alt="Mango Sticky Rice">
+               </a>
+            </div>
+            <h2>Mango Sticky Rice</h2>
+            <p>A classic Thai dessert featuring sweet mango slices served over sticky rice, drizzled with coconut milk. It's a taste of tropical paradise!</p>
+        </div>
+    </div>
+</body>
+</html>
