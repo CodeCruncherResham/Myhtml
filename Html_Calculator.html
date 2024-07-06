@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Calculator</title>
+    <!-- For styling -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .calculator {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input[type="button"] {
+            width: 100%;
+            padding: 20px;
+            background-color: green;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="button"]:hover {
+            background-color: darkgreen;
+        }
+
+        input[type="text"] {
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            border: 2px solid black;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <h1>Simple HTML Calculator</h1>
+        <!-- Create table -->
+        <table id="calcu">
+            <tr>
+                <td colspan="3">
+                    <input type="text" id="result" readonly>
+                </td>
+                <td><input type="button" value="c" onclick="clearResult()"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="1" onclick="addToResult('1')"></td>
+                <td><input type="button" value="2" onclick="addToResult('2')"></td>
+                <td><input type="button" value="3" onclick="addToResult('3')"></td>
+                <td><input type="button" value="/" onclick="addToResult('/')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="addToResult('4')"></td>
+                <td><input type="button" value="5" onclick="addToResult('5')"></td>
+                <td><input type="button" value="6" onclick="addToResult('6')"></td>
+                <td><input type="button" value="*" onclick="addToResult('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="addToResult('7')"></td>
+                <td><input type="button" value="8" onclick="addToResult('8')"></td>
+                <td><input type="button" value="9" onclick="addToResult('9')"></td>
+                <td><input type="button" value="-" onclick="addToResult('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onclick="addToResult('0')"></td>
+                <td><input type="button" value="." onclick="addToResult('.')"></td>
+                <td><input type="button" value="=" onclick="calculateResult()"></td>
+                <td><input type="button" value="+" onclick="addToResult('+')"></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function clearResult() {
+            document.getElementById('result').value = '';
+        }
+
+        function addToResult(value) {
+            document.getElementById('result').value += value;
+        }
+
+        function calculateResult() {
+            const resultField = document.getElementById('result');
+            try {
+                resultField.value = eval(resultField.value);
+            } catch (e) {
+                resultField.value = 'Error';
+            }
+        }
+    </script>
+</body>
+
+</html>
