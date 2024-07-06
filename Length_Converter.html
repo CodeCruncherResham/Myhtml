@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Converter</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .converter {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-group select,
+        .input-group input {
+            width: calc(100% - 12px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .convert-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .convert-btn:hover {
+            background-color: #45a049;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="converter">
+        <h1>Length Converter</h1>
+
+        <div class="input-group">
+            <label for="inputLength">Enter Length:</label>
+            <input type="number" id="inputLength" placeholder="Enter length..." step="any" required>
+        </div>
+
+        <div class="input-group">
+            <label for="fromUnit">From:</label>
+            <select id="fromUnit">
+                <option value="meter">Meter (m)</option>
+                <option value="centimeter">Centimeter (cm)</option>
+                <option value="kilometer">Kilometer (km)</option>
+                <option value="inch">Inch (in)</option>
+                <option value="foot">Foot (ft)</option>
+                <option value="yard">Yard (yd)</option>
+                <option value="mile">Mile (mi)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="toUnit">To:</label>
+            <select id="toUnit">
+                <option value="meter">Meter (m)</option>
+                <option value="centimeter">Centimeter (cm)</option>
+                <option value="kilometer">Kilometer (km)</option>
+                <option value="inch">Inch (in)</option>
+                <option value="foot">Foot (ft)</option>
+                <option value="yard">Yard (yd)</option>
+                <option value="mile">Mile (mi)</option>
+            </select>
+        </div>
+
+        <button class="convert-btn" onclick="convertLength()">Convert</button>
+
+        <div class="output" id="outputResult"></div>
+    </div>
+
+    <script>
+        function convertLength() {
+            var inputLength = parseFloat(document.getElementById('inputLength').value);
+            var fromUnit = document.getElementById('fromUnit').value;
+            var toUnit = document.getElementById('toUnit').value;
+
+            var factors = {
+                meter: {
+                    meter: 1,
+                    centimeter: 100,
+                    kilometer: 0.001,
+                    inch: 39.3701,
+                    foot: 3.28084,
+                    yard: 1.09361,
+                    mile: 0.000621371
+                },
+                centimeter: {
+                    meter: 0.01,
+                    centimeter: 1,
+                    kilometer: 0.00001,
+                    inch: 0.393701,
+                    foot: 0.0328084,
+                    yard: 0.0109361,
+                    mile: 0.00000621371
+                },
+                kilometer: {
+                    meter: 1000,
+                    centimeter: 100000,
+                    kilometer: 1,
+                    inch: 39370.1,
+                    foot: 3280.84,
+                    yard: 1093.61,
+                    mile: 0.621371
+                },
+                inch: {
+                    meter: 0.0254,
+                    centimeter: 2.54,
+                    kilometer: 0.0000254,
+                    inch: 1,
+                    foot: 0.0833333,
+                    yard: 0.0277778,
+                    mile: 0.0000157828
+                },
+                foot: {
+                    meter: 0.3048,
+                    centimeter: 30.48,
+                    kilometer: 0.0003048,
+                    inch: 12,
+                    foot: 1,
+                    yard: 0.333333,
+                    mile: 0.000189394
+                },
+                yard: {
+                    meter: 0.9144,
+                    centimeter: 91.44,
+                    kilometer: 0.0009144,
+                    inch: 36,
+                    foot: 3,
+                    yard: 1,
+                    mile: 0.000568182
+                },
+                mile: {
+                    meter: 1609.34,
+                    centimeter: 160934,
+                    kilometer: 1.60934,
+                    inch: 63360,
+                    foot: 5280,
+                    yard: 1760,
+                    mile: 1
+                }
+            };
+
+            var result = inputLength * factors[fromUnit][toUnit];
+
+            document.getElementById('outputResult').innerHTML = inputLength.toFixed(2) + ' ' + fromUnit + ' = ' + result.toFixed(2) + ' ' + toUnit;
+        }
+    </script>
+
+</body>
+
+</html>
