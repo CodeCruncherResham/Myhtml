@@ -1,0 +1,131 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    .column{
+        float: left;
+        width: 25%;
+        padding: 10px;
+    }
+        .row:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+@media screen and (max-width:900px) {
+    .column{
+        width: 50%;
+    }
+}
+@media screen and (max-width:600px) {
+    .column{
+        width: 100%;
+    }
+}
+
+</style>
+<body>
+    <h2>mixed column layout</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero dignissimos, praesentium hic vitae magni soluta delectus minima corrupti fugiat magnam voluptates assumenda, consequatur exercitationem. Alias modi corporis accusantium dolor neque.</p>
+    <div class="row">
+        <div class="column" style="background-color: #aaa;"><h2>Column1</h2><p>Lorem ipsum dolor sit amet.</p></div>
+        <div class="column" style="background-color: #bbb;"><h2>Column2</h2><p>Lorem ipsum dolor sit amet.</p></div>
+        <div class="column" style="background-color: #ccc;"><h2>Column3</h2><p>Lorem ipsum dolor sit amet.</p></div>
+        <div class="column" style="background-color: #ddd;"><h2>Column4</h2><p>Lorem ipsum dolor sit amet.</p></div>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixed Column Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .column {
+            flex: 25%;
+            padding: 10px;
+            transition: transform 0.3s;
+        }
+        .column:hover {
+            transform: scale(1.05);
+        }
+        .column h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        @media screen and (max-width: 900px) {
+            .column {
+                flex: 50%;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+            }
+        }
+        .column {
+            background-color: #eee;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Mixed Column Layout</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dignissimos, praesentium hic vitae magni soluta delectus minima corrupti fugiat magnam voluptates assumenda.</p>
+    <div class="row">
+        <div class="column" style="background-color: #ffcccb;">
+            <h2>Column 1</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="column" style="background-color: #add8e6;">
+            <h2>Column 2</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="column" style="background-color: #90ee90;">
+            <h2>Column 3</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="column" style="background-color: #ffd700;">
+            <h2>Column 4</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+</body>
+</html>

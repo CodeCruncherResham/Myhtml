@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Icon Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .icon-bar {
+            width: 100%;
+            background-color: #555;
+            overflow: auto;
+            /* position: fixed; */
+             /* Fixed at the bottom */
+            bottom: 0;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .icon-bar a {
+            float: left;
+            text-align: center;
+            width: 20%;
+            padding: 15px 0; /* Increased padding for better touch targets */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            color: white;
+            font-size: 24px; /* Adjusted font size for better visibility */
+        }
+        .icon-bar a:hover {
+            background-color: #000;
+            transform: scale(1.1); /* Added scale effect on hover */
+        }
+        .active {
+            background-color: #04aa6d;
+        }
+    </style>
+</head>
+<body>
+    <div class="icon-bar">
+        <a href="#" class="active"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-search"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+        <a href="#"><i class="fas fa-globe"></i></a>
+        <a href="#"><i class="fas fa-trash"></i></a>
+    </div>
+</body>
+</html>

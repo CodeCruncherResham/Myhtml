@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Positioning</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .box {
+      width: 200px;
+      height: 150px;
+      background-color: lightblue;
+      border: 2px solid navy;
+      margin: 50px auto;
+      text-align: center;
+      line-height: 150px;
+      position: relative;
+    }
+
+    .absolute-box {
+      width: 100px;
+      height: 100px;
+      background-color: hotpink;
+      color: white;
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      line-height: 100px;
+    }
+
+    .fixed-box {
+      width: 100px;
+      height: 100px;
+      background: red;
+      color: white;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      line-height: 100px;
+    }
+
+    .sticky-box {
+      background: lightgreen;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      font-weight: bold;
+    }
+
+    .content {
+      height: 1500px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="fixed-box">Fixed</div>
+
+  <div class="sticky-box">Sticky Header</div>
+
+  <div class="box">
+    Relative Box
+    <div class="absolute-box">ABS</div>
+  </div>
+
+  <div class="content">
+    <p>Scroll to see fixed & sticky effect. The pink box is absolute positioned inside the blue box.</p>
+  </div>
+
+</body>
+</html>

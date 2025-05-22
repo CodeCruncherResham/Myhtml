@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .label {
+            display: inline-block;
+            color: white;
+            padding: 12px 20px;
+            margin: 5px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .label:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .success {
+            background-color: #04aa6d;
+        }
+        .info {
+            background-color: #2196f3;
+        }
+        .warning {
+            background-color: #ff9800;
+        }
+        .danger {
+            background-color: #f44336;
+        }
+        .other {
+            background-color: #e7e7e7;
+            color: black;
+        }
+        @media (max-width: 600px) {
+            .label {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Label Showcase</h1>
+        <span class="label success">Success</span>
+        <span class="label info">Info</span>
+        <span class="label warning">Warning</span>
+        <span class="label danger">Danger</span>
+        <span class="label other">Other</span>
+    </div>
+</body>
+</html>

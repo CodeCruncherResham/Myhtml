@@ -1,0 +1,53 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marquee Text Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        marquee {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1.5em;
+            border-radius: 5px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Marquee Text Showcase</h1>
+    
+    <marquee bgcolor="#FFCC00">Hello World 1</marquee>
+    
+    <!-- Marquee with behavior -->
+    <marquee behavior="scroll" bgcolor="#FFFF00">Hello World 2</marquee>
+    <marquee behavior="slide" bgcolor="#FFFFCC">Hello World 3</marquee>
+    <marquee behavior="alternate" bgcolor="#FFFF99">Hello World 4</marquee>
+    
+    <!-- Marquee with scroll amount -->
+    <marquee behavior="scroll" scrollamount="5" bgcolor="#CCFFCC">Hello World 5</marquee>
+    <marquee behavior="slide" scrollamount="10" bgcolor="#99FF99">Hello World 6</marquee>
+    <marquee behavior="alternate" scrollamount="2" bgcolor="#66FF66">Hello World 7</marquee>
+    
+    <!-- Marquee with direction -->
+    <marquee behavior="scroll" scrollamount="5" direction="left" bgcolor="#00FF00">Hello World 8</marquee>
+    <marquee behavior="slide" scrollamount="10" direction="right" bgcolor="#66FFCC">Hello World 9</marquee>
+    <marquee behavior="alternate" scrollamount="2" direction="up" bgcolor="#66CCCC">Hello World 10</marquee>
+    <marquee behavior="scroll" scrollamount="8" direction="down" bgcolor="#00CCCC">Hello World 11</marquee>
+    
+    <!-- Marquee with loop -->
+    <marquee scrollamount="6" loop="3" bgcolor="#009999" style="height: 50%; width: 50%;">Hello World 12</marquee>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Table Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+            background-color: white;
+        }
+        th, td {
+            text-align: left;
+            padding: 16px;
+            border: 1px solid #ddd;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .nested-table {
+            margin-top: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Nested Table Example</h2>
+    <p>This example demonstrates a nested table structure.</p>
+    <table>
+        <tr>
+            <td>Cell 1</td>
+            <td>
+                Nested Table
+                <table class="nested-table">
+                    <tr>
+                        <td>Cell 1.1</td>
+                    </tr>
+                    <tr>
+                        <td>Cell 1.2</td>
+                    </tr>
+                    <tr>
+                        <td>Cell 1.3</td>
+                    </tr>
+                    <tr>
+                        <td>Cell 1.4</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

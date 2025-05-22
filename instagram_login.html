@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f8f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #405de6;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            padding: 12px 20px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            width: 100%;
+            background-color: #f0f2f5;
+            transition: background-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            background-color: #e0e2e5;
+        }
+
+        input[type="submit"] {
+            background-color: #405de6;
+            color: #ffffff;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border-radius: 25px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3442c1;
+        }
+
+        .links {
+            margin-top: 20px;
+        }
+
+        .links a {
+            color: #777777;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #405de6;
+        }
+
+        /* Background Animation */
+        .background-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://source.unsplash.com/1600x900/?nature');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            animation: animateBackground 30s infinite linear;
+            opacity: 0.3;
+        }
+
+        @keyframes animateBackground {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="background-pattern"></div>
+
+<div class="container">
+    <h1>Instagram</h1>
+    <form>
+        <input type="text" placeholder="Username or Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="submit" value="Log In">
+    </form>
+    <div class="links">
+        <a href="#">Forgot Password?</a>
+        <span>|</span>
+        <a href="#">Sign Up</a>
+    </div>
+</div>
+
+</body>
+</html>

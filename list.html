@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        hr {
+            margin: 20px 0;
+        }
+        video {
+            border-radius: 10px;
+            width: 100%; /* Adjust to full width */
+            max-width: 500px; /* Maximum width */
+        }
+        iframe {
+            width: 100%; /* Adjust to full width */
+            max-width: 500px; /* Maximum width */
+            height: 300px; /* Set a height for iframe */
+            border-radius: 10px;
+            border: none; /* Remove border */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation List -->
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+    </ul>
+
+    <hr>
+
+    <!-- Iframe -->
+    <iframe src="#" frameborder="0" title="Embedded Content"></iframe>
+    <hr>
+
+    <!-- Audio Tag -->
+    <audio controls>
+        <source src="#" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <hr>
+
+    <!-- Video Tag -->
+    <video controls poster="flower.jpeg">
+        <source src="#" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+</body>
+</html>

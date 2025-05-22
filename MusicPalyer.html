@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .progress-bar {
+            background-color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title" id="songLabel">No song playing</h5>
+
+                <div class="progress mb-3">
+                    <div id="songProgressBar" class="progress-bar" role="progressbar" style="width: 0%;"></div>
+                </div>
+
+                <div class="btn-group mb-3">
+                    <button id="previousButton" class="btn btn-secondary">Previous</button>
+                    <button id="playButton" class="btn btn-success">Play</button>
+                    <button id="pauseButton" class="btn btn-warning">Pause</button>
+                    <button id="resetButton" class="btn btn-danger">Reset</button>
+                    <button id="nextButton" class="btn btn-secondary">Next</button>
+                </div>
+
+                <div class="mb-3">
+                    <label for="speedBox">Speed:</label>
+                    <select id="speedBox" class="custom-select w-25">
+                        <option value="1">100%</option>
+                        <option value="0.75">75%</option>
+                        <option value="0.5">50%</option>
+                        <option value="1.25">125%</option>
+                        <option value="1.5">150%</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="volumeSlider">Volume:</label>
+                    <input id="volumeSlider" type="range" class="custom-range" min="0" max="100" value="50">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let songs = [
+                'song1.mp3',
+                'song2.mp3',
+                'song3.mp3'
+            ];
+            let songIndex = 0;
+            let audio = new Audio();
+            let songLabel = document.getElementById('songLabel');
+            let songProgressBar = document.getElementById('songProgressBar');
+            let playButton = document.getElementById('playButton');
+            let pauseButton = document.getElementById('pauseButton');
+            let resetButton = document.getElementById('resetButton');
+            let previousButton = document.getElementById('previousButton');
+            let nextButton = document.getElementById('nextButton');
+            let speedBox = document.getElementById('speedBox');
+            let volumeSlider = document.getElementById('volumeSlider');
+            let timer;
+
+            function loadSong(index) {
+                audio.src = songs[index];
+                songLabel.textContent = `Playing: ${songs[index]}`;
+                playMedia();
+            }
+
+            function playMedia() {
+                clearInterval(timer);
+                audio.play();
+                updateProgressBar();
+            }
+
+            function pauseMedia() {
+                clearInterval(timer);
+                audio.pause();
+            }
+
+            function resetMedia() {
+                clearInterval(timer);
+                audio.currentTime = 0;
+                updateProgressBar();
+            }
+
+            function updateProgressBar() {
+                timer = setInterval(() => {
+                    let progress = (audio.currentTime / audio.duration) * 100;
+                    songProgressBar.style.width = `${progress}%`;
+                    if (progress === 100) {
+                        clearInterval(timer);
+                    }
+                }, 1000);
+            }
+
+            playButton.addEventListener('click', playMedia);
+            pauseButton.addEventListener('click', pauseMedia);
+            resetButton.addEventListener('click', resetMedia);
+            previousButton.addEventListener('click', function () {
+                songIndex = (songIndex > 0) ? songIndex - 1 : songs.length - 1;
+                loadSong(songIndex);
+            });
+
+            nextButton.addEventListener('click', function () {
+                songIndex = (songIndex < songs.length - 1) ? songIndex + 1 : 0;
+                loadSong(songIndex);
+            });
+
+            speedBox.addEventListener('change', function () {
+                audio.playbackRate = speedBox.value;
+            });
+
+            volumeSlider.addEventListener('input', function () {
+                audio.volume = volumeSlider.value / 100;
+            });
+
+            loadSong(songIndex);
+        });
+    </script>
+</body>
+</html>

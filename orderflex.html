@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: #eee;
+            margin: 50px auto;
+            padding: 0;
+            border: 3px solid #000;
+            height: 400px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around; /* Center items with space between */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            transition: box-shadow 0.3s; /* Smooth shadow transition */
+        }
+        .items {
+            background: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            border-radius: 8px; /* Rounded corners for items */
+            transition: transform 0.3s; /* Smooth scaling on hover */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for items */
+        }
+
+        .item1 { background: orangered; }
+        .item2 { background: yellowgreen; }
+        .item3 { background: mediumpurple; }
+        .item4 { background: hotpink; order: -1; }
+
+        /* Hover effects */
+        .items:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column; /* Stack items vertically on small screens */
+                height: auto; /* Adjust height */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item1">One</div>
+        <div class="items item2">Two</div>
+        <div class="items item3">Three</div>
+        <div class="items item4">Four</div>
+    </div>
+</body>
+</html>

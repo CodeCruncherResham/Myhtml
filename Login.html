@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My College Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .header {
+            width: 100%;
+            height: 200px;
+            background-image: url("kec.JPEG");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        .middle {
+            width: 100%;
+            padding: 20px;
+            background-color: palegreen;
+            text-align: center;
+        }
+        .menu {
+            margin: 20px 0;
+        }
+        .menu a {
+            margin: 0 15px;
+            font-size: 20px;
+            color: #333;
+            text-decoration: none;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            width: 100%;
+            padding: 20px;
+            background-color: crimson;
+            color: white;
+            text-align: center;
+        }
+        .footer input[type="text"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+            max-width: 300px;
+        }
+        .footer input[type="button"] {
+            padding: 10px 20px;
+            background-color: white;
+            color: crimson;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer input[type="button"]:hover {
+            background-color: #ffdddd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        College Photo
+    </div>
+
+    <div class="middle">
+        <h2>Welcome to My College</h2>
+        <div class="menu">
+            <a href="About.html">About</a>
+            <a href="Login.html">Login</a>
+            <a href="register.html">Register</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3>Login</h3>
+        <label for="username"><b>User</b></label>
+        <input type="text" id="username" placeholder="Enter your username" />
+        <label for="password"><b>Password</b></label>
+        <input type="password" id="password" placeholder="Enter your password" />
+        <br>
+        <input type="button" value="Login" />
+    </div>
+
+</body>
+</html>

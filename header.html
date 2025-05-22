@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Header</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background for contrast */
+        }
+        .header {
+            padding: 60px;
+            text-align: center;
+            background-color: #1abc1a;
+            color: white;
+            font-size: 30px;
+            position: relative; /* To position the overlay */
+            overflow: hidden; /* To hide overflow from the overlay */
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://source.unsplash.com/1600x900/?nature');
+            background-size: cover;
+            opacity: 0.2; /* Light opacity for the overlay */
+            z-index: 0; /* Behind the text */
+        }
+        .header h1 {
+            position: relative; /* For z-index to work */
+            z-index: 1; /* Bring text above overlay */
+            margin: 0;
+            font-size: 3em; /* Larger font size for emphasis */
+            transition: transform 0.3s; /* Smooth hover effect */
+        }
+        .header h1:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+        .header p {
+            position: relative; /* For z-index to work */
+            z-index: 1; /* Bring text above overlay */
+            font-size: 1.2em; /* Slightly larger than default */
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Supercool Header</h1>
+        <p>Your catchy subtitle goes here!</p>
+    </div>
+</body>
+</html>

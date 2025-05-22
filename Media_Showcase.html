@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Media Showcase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+    }
+    section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    video, audio {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin-top: 15px;
+      border: 1px solid #ccc;
+    }
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 315px;
+      display: block;
+      margin-top: 15px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎬 HTML Media Showcase</h1>
+
+  <!-- Video Section -->
+  <section id="video">
+    <h2>🎥 HTML Video</h2>
+    <p>Here is an example of an HTML video element:</p>
+    <video controls>
+      <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Audio Section -->
+  <section id="audio">
+    <h2>🎵 HTML Audio</h2>
+    <p>Here is an example of an HTML audio element:</p>
+    <audio controls>
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mp3">
+      Your browser does not support the audio tag.
+    </audio>
+  </section>
+
+  <!-- Plug-ins Section -->
+  <section id="plugins">
+    <h2>🔌 HTML Plug-ins (Example: Flash)</h2>
+    <p>Note: HTML5 has phased out most plug-ins like Flash, but here's an example of embedding an old-school plug-in:</p>
+    <object data="https://www.w3schools.com/html/flash_example.swf" type="application/x-shockwave-flash" width="600" height="400">
+      <param name="movie" value="https://www.w3schools.com/html/flash_example.swf">
+      <param name="quality" value="high">
+      <param name="bgcolor" value="#ffffff">
+      <p>Your browser does not support Flash content. Please update your browser.</p>
+    </object>
+  </section>
+
+  <!-- YouTube Embed Section -->
+  <section id="youtube">
+    <h2>📺 HTML YouTube Embed</h2>
+    <p>Here is an embedded YouTube video using the iframe element:</p>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>
+
+</body>
+</html>

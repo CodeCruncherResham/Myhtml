@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9eff1;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1000px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        .side {
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .side1 {
+            background-color: #3b5998;
+            color: white;
+            text-align: center;
+        }
+        .side2 {
+            background-color: #ffffff;
+            color: #333;
+        }
+        h2 {
+            margin-bottom: 15px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        input[type="email"],
+        input[type="password"],
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="text"]:focus,
+        input[type="date"]:focus {
+            border-color: #3b5998;
+            outline: none;
+        }
+        input[type="button"] {
+            padding: 12px;
+            background-color: #42b72a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        input[type="button"]:hover {
+            background-color: #36a420;
+        }
+        .gap {
+            margin-top: 15px;
+            text-align: left;
+            width: 100%;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .link {
+            color: #3b5998;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .side {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="side side1">
+            <h2>Facebook</h2>
+            <p>Connect with friends and the world around you on Facebook.</p>
+        </div>
+        <div class="side side2">
+            <h2>Login</h2>
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <input type="button" value="Login" />
+            <div class="gap">
+                <input type="checkbox" /> Keep me logged in
+                <p><a class="link" href="#">Forgot your password?</a></p>
+            </div>
+        </div>
+        <div class="side side2">
+            <h2>Sign Up</h2>
+            <p>It's free and always will be.</p>
+            <input type="text" placeholder="First name" />
+            <input type="text" placeholder="Last name" />
+            <input type="text" placeholder="Email or Phone number" />
+            <input type="text" placeholder="Re-enter Email or Phone number" />
+            <input type="password" placeholder="New password" />
+            <h2>Birthday</h2>
+            <input type="date" />
+            <div class="radio-group">
+                <label><input type="radio" name="gender" /> Female</label>
+                <label><input type="radio" name="gender" /> Male</label>
+            </div>
+            <p>By clicking Sign Up, you agree to our Terms and that you have read our Data Policy, including our Cookie Use.</p>
+            <input type="button" value="Sign Up" />
+            <hr />
+            <p>Create a page for a celebrity, band, or business.</p>
+        </div>
+    </div>
+</body>
+</html>

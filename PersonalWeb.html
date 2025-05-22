@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    header{
+height: 45px;
+    }
+    header nav ul{
+        display: flex;
+        margin-left: 70%;
+        list-style: none;
+    }
+    header nav ul li{
+        padding-left: 10%;
+    }
+    section{
+        height: 100vh;
+        border: 1px solid grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        margin-top: 10%;
+    }
+    .container img{
+        height: 300px;
+        border-radius: 50%;
+    }
+    .container h2{
+        margin-top: 2%;
+        font-size: 1.5rem;
+    }
+    footer{
+        line-height: 40px;
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+    }
+    #intro{
+        background-image: url(./images/login.jpg);
+        background-repeat: round;
+        background-size: cover;
+    }
+    #about{
+background-color: #b0c5f4;
+    }
+    #contact{
+background-color: #a4a4dc;
+}
+</style>
+<body>
+    <header>
+<nav>
+    <ul>
+        <li><a href="#intro" >Home</a></li>
+        <li><a href="#about" >About</a></li>
+        <li><a href="#contact" >Contact</a></li>
+    </ul>
+</nav>
+    </header>
+    <main>
+        <section id="intro">
+<div class="container">
+    <img src="./images/tanvi.jpg" alt="display picture of my">
+    <h2>My nam is Resham</h2>
+</div>
+        </section>
+        <section id="about">
+            <div class="container"><h1>About Me</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore asperiores ex et voluptates debitis nobis? Omnis ad, totam recusandae deserunt neque, consequatur reiciendis, ut numquam facere quibusdam temporibus tempore molestias?</p>
+            <ul>
+                <li>BTect Qualified</li>
+                <li>Software Engineer</li>
+                <li>GATE AIR 01</li>
+            </ul>
+            </div>
+        </section>
+        <section id="contact">
+         <div class="container">
+            <h1>Contact me</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni excepturi itaque et minus, hic reiciendis alias neque tempore perferendis perspiciatis quisquam. Quibusdam repellendus molestiae corrupti necessitatibus consequatur dignissimos earum magni.
+            </p>
+            <ul>
+                <li>Email Id</li>
+                <li>Insta id</li>
+                <li>Youtube id</li>
+            </ul>
+         </div>
+        </section>
+    </main>
+    <footer>
+<p>footer</p>
+    </footer>
+</body>
+</html>
