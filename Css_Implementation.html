@@ -1,0 +1,128 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bdy" bgcolor="red">
+    <h1 id="stp"></h1>
+    <div id="box"></div>
+    <h1 id="txt">welcome to my home</h1>
+    <button onclick="color()">change color of this text</button>
+    <button onclick="font()">change font style of this text</button>
+    <button id="btn" onclick="s()">Amit</button>
+    <button id="btn" onclick="change()">click me to change background color</button>
+    <script>
+        document.getElementById("stp").innerHTML="STP Computer Education";
+        document.getElementById("stp").style.color="pink";
+        var a=document.getElementById("box");
+        a.style.width="500px";
+        a.style.height="500px";
+        a.style.backgroundColor="blue";
+
+        var a=document.getElementById("txt");
+        function color(){
+            a.style.color="orange"
+        }
+function font(){
+    a.style.fontFamily="sans-serif";
+}
+function s(){
+var btn=document.getElementById("btn");
+btn.innerHTML="Ankit";
+btn.style.backgroundColor="black";
+btn.style.color="red"
+}
+function change(){
+    var bdy=document.getElementById("bdy");
+bdy.bgColor="orange";
+}
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Page</title>
+    <style>
+        body {
+            background-color: red;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+        #box {
+            width: 500px;
+            height: 500px;
+            background-color: blue;
+            margin: 20px auto;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        .highlight {
+            background-color: black;
+            color: red;
+        }
+    </style>
+</head>
+<body id="bdy">
+    <h1 id="stp"></h1>
+    <div id="box">Content Box</div>
+    <h1 id="txt">Welcome to My Home</h1>
+    <button onclick="changeColor()">Change Color of This Text</button>
+    <button onclick="changeFont()">Change Font Style of This Text</button>
+    <button id="btn" onclick="changeName()">Amit</button>
+    <button onclick="changeBackgroundColor()">Click Me to Change Background Color</button>
+
+    <script>
+        // Initialize page content
+        document.getElementById("stp").textContent = "STP Computer Education";
+        document.getElementById("stp").style.color = "pink";
+
+        const txtElement = document.getElementById("txt");
+
+        // Change text color
+        function changeColor() {
+            txtElement.style.color = "orange";
+        }
+
+        // Change font style
+        function changeFont() {
+            txtElement.style.fontFamily = "Cursive";
+
+        }
+
+        // Change button name and style
+        function changeName() {
+            const btn = document.getElementById("btn");
+            btn.textContent = "Ankit";
+            btn.classList.add("highlight");
+        }
+
+        // Change background color of the body
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = "orange";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centered Table Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        p {
+            color: #555;
+        }
+        table {
+            border-collapse: collapse;
+            border: 1px solid #101010;
+            width: 80%; /* Adjusted width for better centering */
+            margin: 20px auto; /* Center the table */
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            text-align: left;
+            padding: 16px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1; /* Highlight on hover */
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Zebra striping */
+        }
+    </style>
+</head>
+<body>
+    <h2>Centered Table</h2>
+    <p>This table displays information in a clean and organized format.</p>
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>Johnson</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Lee</td>
+            <td>28</td>
+        </tr>
+    </table>
+</body>
+</html>

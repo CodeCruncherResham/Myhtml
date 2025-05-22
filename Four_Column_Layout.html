@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Column Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background for contrast */
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Space between columns */
+            margin: -10px; /* Remove extra space from margins */
+        }
+
+        .column {
+            background-color: #2196F3; /* Column background */
+            color: white; /* Text color */
+            padding: 20px;
+            text-align: center;
+            flex: 1; /* Allow flexible width */
+            min-width: 220px; /* Minimum width for columns */
+            margin: 10px; /* Margin for spacing */
+            border-radius: 8px; /* Rounded corners */
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth effects */
+        }
+
+        .column:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+        }
+
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%; /* Full width on smaller screens */
+                margin: 10px 0; /* Adjust margin for vertical spacing */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column">One</div>
+        <div class="column">Two</div>
+        <div class="column">Three</div>
+        <div class="column">Four</div>
+    </div>
+</body>
+</html>

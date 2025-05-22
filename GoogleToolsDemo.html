@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Tools Demo</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <!-- Google Charts loader -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <!-- Google Analytics Setup (example ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXXX-X');
+  </script>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    #chart_div {
+      width: 600px;
+      height: 400px;
+    }
+  </style>
+
+  <script type="text/javascript">
+    // Load the Visualization API and the corechart package.
+    google.charts.load('current', {'packages':['corechart']});
+    
+    // Set a callback to run when the API is loaded
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      // Sample data
+      var data = google.visualization.arrayToDataTable([
+        ['Year', 'Visitors'],
+        ['2020', 1000],
+        ['2021', 1170],
+        ['2022', 1250],
+        ['2023', 1530]
+      ]);
+
+      var options = {
+        title: 'Website Visitors by Year',
+        hAxis: {title: 'Year'},
+        vAxis: {title: 'Visitors'},
+        legend: 'none'
+      };
+
+      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Google Tools in HTML</h1>
+    <p>This page uses Google Fonts, Google Fonts Pairing, Google Charts, and Analytics setup.</p>
+  </header>
+
+  <section>
+    <h2>Typography Example</h2>
+    <p>This paragraph uses the <strong>Roboto</strong> font, while the headings use <strong>Playfair Display</strong>.</p>
+  </section>
+
+  <section>
+    <h2>📊 Google Chart</h2>
+    <div id="chart_div"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Google Tools Demo</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Class Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+    <script>
+        class Bank {
+            constructor() {
+                this.balance = 0;
+            }
+
+            input(amount) {
+                this.balance += amount;
+                console.log(`Deposited: $${amount}. New balance: $${this.balance}`);
+            }
+
+            withdraw(amount) {
+                if (amount > this.balance) {
+                    console.log(`Insufficient funds to withdraw $${amount}. Current balance: $${this.balance}`);
+                } else {
+                    this.balance -= amount;
+                    console.log(`Withdrew: $${amount}. New balance: $${this.balance}`);
+                }
+            }
+
+            delete() {
+                console.log(`Account closed. Final balance: $${this.balance}`);
+                this.balance = 0; // Reset balance
+            }
+        }
+
+        const bankAccount = new Bank();
+        bankAccount.input(100); // Deposit $100
+        bankAccount.withdraw(50); // Withdraw $50
+        bankAccount.delete(); // Close account
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Bank Class Example</h1>
+        <p>Check the console for transaction details!</p>
+    </div>
+</body>
+</html>

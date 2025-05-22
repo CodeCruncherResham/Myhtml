@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexbox-image-gallery</title>
+    <style>
+      .wrapper h1 {
+        text-align: center;
+        font-size: 30px;
+        font-family: Audiowide;
+      }
+      .img-area {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+      }
+      .single-img {
+        padding: 0 20px 20px;
+      }
+      img:hover {
+        opacity: 0.5;
+        transition: 0.9s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Flexbox Image Gallery</h1>
+      <div class="img-area">
+        <div class="single-img">
+            <img src="./images/1.jpeg" alt="">
+        </div>
+        <div class="single-img">
+          <img src="./images/2.jpeg" alt="">
+        </div>
+        <div class="single-img">
+          <img src="./images/3.jpeg" alt="">
+        </div>
+        <div class="single-img">
+          <img src="./images/4.jpeg" alt="">
+        </div>
+        <div class="single-img">
+          <img src="./images/6.jpeg" alt="">
+        </div>
+        <div class="single-img">
+          <img src="./images/7.jpeg" alt="">
+        </div>
+          <div class="single-img">
+            <img src="./images/8.jpeg" alt="">
+            </div>
+          <div class="single-img">
+            <img src="./images/9.jpeg" alt="">
+        </div>
+  
+      </div>
+    </div>
+  </body>
+</html>

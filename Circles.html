@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Circles</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .dot {
+            height: 50px; /* Increased size for better visibility */
+            width: 50px; /* Increased size for better visibility */
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 10px; /* Added spacing between dots */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+        }
+
+        .dot:hover {
+            background-color: #3498db; /* Change color on hover */
+            transform: scale(1.2); /* Slightly enlarge on hover */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Interactive CSS Circles</h1>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</body>
+</html>

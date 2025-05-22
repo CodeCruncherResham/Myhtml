@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: maroon;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        fieldset {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        legend {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="url"],
+        input[type="color"],
+        input[type="date"],
+        input[type="datetime-local"],
+        input[type="month"],
+        input[type="week"],
+        input[type="file"],
+        input[type="search"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="reset"],
+        input[type="image"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        input[type="image"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="form-control" action="" method="post">
+        <fieldset>
+            <legend>Registration Form</legend>
+
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" autofocus required size="30">
+
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required size="30">
+
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" disabled size="30">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male" required> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other
+
+            <label>Sports:</label>
+            <input type="checkbox" name="sports" value="cricket"> Cricket
+            <input type="checkbox" name="sports" value="football"> Football
+            <input type="checkbox" name="sports" value="volleyball"> Volleyball
+
+            <label for="file">File:</label>
+            <input type="file" id="file" name="file">
+
+            <label for="color">Color:</label>
+            <input type="color" id="color" name="color">
+
+            <label for="birthdate">Date:</label>
+            <input type="date" id="birthdate" name="birthdate">
+
+            <label for="datetime">Date and Time:</label>
+            <input type="datetime-local" id="datetime" name="datetime">
+
+            <label for="month">Month:</label>
+            <input type="month" id="month" name="month">
+
+            <label for="week">Week:</label>
+            <input type="week" id="week" name="week">
+
+            <label for="phonenumber">Phone Number:</label>
+            <input type="number" id="phonenumber" name="phonenumber">
+
+            <label for="url">URL:</label>
+            <input type="url" id="url" name="url">
+
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="search">
+
+            <label for="contactnumber">Contact Number:</label>
+            <input type="tel" id="contactnumber" name="contactnumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-123-1234">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <input type="reset" value="Reset">
+            <input type="image" alt="Submit" src="C:/path/to/your/image.jpg" width="25"><br><br>
+        </fieldset>
+    </form>
+
+</body>
+</html>

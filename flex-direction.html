@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox Layout</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4; /* Light background for contrast */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: #ffffff; /* White background for the container */
+            margin: 50px auto; /* Center the container */
+            padding: 20px;
+            border: 3px solid #2196F3; /* Accent border color */
+            border-radius: 10px; /* Rounded corners */
+            display: flex;
+            flex-direction: row-reverse; /* Items are displayed in reverse order */
+            justify-content: space-around; /* Space items evenly */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+            flex-wrap: wrap; /* Allow wrapping of items */
+        }
+        .items {
+            background: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 20px;
+            text-align: center;
+            height: 100px; /* Uniform height */
+            width: 120px; /* Uniform width */
+            border-radius: 8px; /* Rounded corners for items */
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+        }
+
+        .items:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+
+        .item1 { background: orangered; }
+        .item2 { background: yellowgreen; }
+        .item3 { background: mediumpurple; }
+        .item4 { background: hotpink; }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column; /* Stack items vertically on small screens */
+                align-items: center; /* Center items */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item1">One</div>
+        <div class="items item2">Two</div>
+        <div class="items item3">Three</div>
+        <div class="items item4">Four</div>
+    </div>
+</body>
+</html>

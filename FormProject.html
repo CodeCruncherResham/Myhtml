@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4; /* Light background for contrast */
+            font-family: Arial, sans-serif;
+        }
+        .outer {
+            box-sizing: border-box;
+            margin: auto;
+            height: 400px; /* Increased height for better layout */
+            width: 350px; /* Slightly narrower */
+            border: 2px solid #333; /* Darker border for better visibility */
+            position: relative;
+            background: url('./img/login.jpg') no-repeat center center; /* Center background */
+            background-size: cover;
+            border-radius: 20px; /* Reduced corner radius for a modern look */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+            overflow: hidden; /* To clip overflowing elements */
+            transition: transform 0.3s;
+        }
+        .outer:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+        h1 {
+            text-align: center;
+            color: white; /* White text for contrast */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Text shadow for readability */
+        }
+        p {
+            margin-left: 20px;
+            color: #333; /* Darker text color */
+        }
+        .in {
+            margin: 10px 20px; /* Added margin for better spacing */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            width: calc(100% - 60px); /* Full width minus padding */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow */
+            transition: border 0.3s;
+        }
+        .in:focus {
+            border: 2px solid #1abc1a; /* Green border on focus */
+            outline: none; /* Remove outline */
+        }
+        #bt {
+            width: 100px;
+            margin-top: 15px;
+            padding: 10px;
+            position: absolute;
+            left: calc(50% - 50px); /* Center the button */
+            border-radius: 5px;
+            background-color: #1abc1a; /* Green background */
+            color: white; /* White text */
+            border: none; /* Remove default border */
+            cursor: pointer; /* Pointer cursor */
+            transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+        }
+        #bt:hover {
+            background: #148c1a; /* Darker green on hover */
+            transform: scale(1.05); /* Slight scale effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <h1>Login Form</h1>
+        <hr />
+        <p>Enter ID</p>
+        <input type="text" class="in" placeholder="Enter ID" id="a" />
+        <p>Enter Password</p>
+        <input type="password" class="in" id="b" placeholder="Enter Password" />
+        <br />
+        <input type="submit" value="Submit" id="bt" onclick="alert('Submitting...')" />
+    </div>
+</body>
+</html>

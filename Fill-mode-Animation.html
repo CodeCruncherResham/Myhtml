@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Fill Modes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f4; /* Light background for contrast */
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .animation-box {
+            width: 120px;
+            height: 120px;
+            background: rebeccapurple;
+            position: relative;
+            margin: 20px auto;
+            text-align: center;
+            display: inline-block;
+            border-radius: 8px; /* Rounded corners */
+            color: white;
+            font-weight: bold;
+            line-height: 120px; /* Center text vertically */
+            transition: transform 0.3s; /* Smooth hover effect */
+        }
+
+        .animation-box:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        /* Animation with forwards fill mode */
+        .forwards {
+            animation-name: moveAndChangeColor;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        /* Animation with backwards fill mode */
+        .backwards {
+            animation-name: moveAndChangeColor;
+            animation-duration: 3s;
+            animation-fill-mode: backwards;
+        }
+
+        /* Animation with both fill modes */
+        .both {
+            animation-name: moveAndChangeColorBoth;
+            animation-duration: 3s;
+            animation-fill-mode: both;
+        }
+
+        @keyframes moveAndChangeColor {
+            from {
+                top: 0;
+            }
+            to {
+                top: 200px;
+                background-color: burlywood;
+            }
+        }
+
+        @keyframes moveAndChangeColorBoth {
+            from {
+                top: 0;
+            }
+            to {
+                top: 200px;
+                background-color: blanchedalmond;
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .animation-box {
+                width: 80px;
+                height: 80px;
+                line-height: 80px; /* Center text vertically */
+            }
+
+            h1 {
+                font-size: 24px; /* Adjust heading size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Animation Fill Modes</h1>
+    <p>Demonstrating how the <strong>animation-fill-mode</strong> property affects the end state of animations:</p>
+
+    <div class="animation-box forwards">
+        <p>Animation with <strong>forwards</strong> fill mode</p>
+    </div>
+
+    <div class="animation-box backwards">
+        <p>Animation with <strong>backwards</strong> fill mode</p>
+    </div>
+
+    <div class="animation-box both">
+        <p>Animation with <strong>both</strong> fill mode</p>
+    </div>
+</body>
+</html>

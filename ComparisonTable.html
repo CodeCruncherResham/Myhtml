@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zebra Striped Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        th, td {
+            text-align: left;
+            padding: 16px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h2>Zebra Striped Table</h2>
+    <p>This table highlights key features and pros in a clear and organized way.</p>
+    <table>
+        <tr>
+            <th style="width: 50%;">Features</th>
+            <th>Basic</th>
+            <th>Pros</th>
+        </tr>
+        <tr>
+            <td>Feature 1</td>
+            <td><i class="fa fa-remove"></i> No</td>
+            <td><i class="fa fa-check"></i> Yes</td>
+        </tr>
+        <tr>
+            <td>Feature 2</td>
+            <td><i class="fa fa-remove"></i> No</td>
+            <td><i class="fa fa-check"></i> Yes</td>
+        </tr>
+        <tr>
+            <td>Feature 3</td>
+            <td><i class="fa fa-remove"></i> No</td>
+            <td><i class="fa fa-check"></i> Yes</td>
+        </tr>
+        <tr>
+            <td>Feature 4</td>
+            <td><i class="fa fa-check"></i> Yes</td>
+            <td><i class="fa fa-check"></i> Yes</td>
+        </tr>
+    </table>
+</body>
+</html>
+

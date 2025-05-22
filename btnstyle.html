@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .btn-solid {
+      background-color: #ff3e3e;
+      color: white;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .btn-solid:hover {
+      background-color: #d13232;
+    }
+    .btn-outline {
+  background: transparent;
+  color: #ff3e3e;
+  padding: 12px 28px;
+  border: 2px solid #ff3e3e;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-outline:hover {
+  background-color: #ff3e3e;
+  color: white;
+}
+.btn-gradient {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.btn-gradient:hover {
+  opacity: 0.9;
+}
+.btn-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+body {
+  background: url('https://images.unsplash.com/photo-1557683316-973673baf926') center/cover no-repeat;
+}
+.btn-icon {
+  background: #222;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.btn-icon:hover {
+  transform: scale(1.05);
+}
+.btn-animated {
+  position: relative;
+  padding: 12px 28px;
+  border: 2px solid #ff3e3e;
+  color: #ff3e3e;
+  background: transparent;
+  font-weight: bold;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-animated::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 0%;
+  height: 100%;
+  background: #ff3e3e;
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+.btn-animated:hover::before {
+  width: 100%;
+}
+.btn-animated:hover {
+  color: white;
+}
+
+    </style>
+</head>
+<body>
+    <button class="btn-solid">Click Me</button>
+<button class="btn-outline">Learn More</button>
+
+<button class="btn-gradient">Get Started</button>
+<button class="btn-glass">Join Now</button>
+<button class="btn-icon">
+  🔥 Subscribe
+</button>
+<button class="btn-animated">Hover Me</button>
+
+
+</body>
+</html>

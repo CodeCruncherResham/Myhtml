@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Timing Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .animation-box {
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            font-weight: bold;
+            position: relative;
+            margin: 10px;
+            color: white; /* Improved text visibility */
+            animation: mymove 5s forwards; /* Default animation */
+        }
+
+        #div1 { animation-timing-function: linear; }
+        #div2 { animation-timing-function: ease; }
+        #div3 { animation-timing-function: ease-in; }
+        #div4 { animation-timing-function: ease-out; }
+        #div5 { animation-timing-function: ease-in-out; }
+
+        @keyframes mymove {
+            from {
+                left: 0;
+            }
+            to {
+                left: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Animation Timing Functions</h1>
+    <p>The <b>animation-timing-function</b> property specifies the speed curve of the animation. The following example shows some of the different speed curves that can be used:</p>
+    
+    <div id="div1" class="animation-box">Linear</div> 
+    <div id="div2" class="animation-box">Ease</div>
+    <div id="div3" class="animation-box">Ease-in</div>
+    <div id="div4" class="animation-box">Ease-out</div> 
+    <div id="div5" class="animation-box">Ease-in-out</div>
+</body>
+</html>

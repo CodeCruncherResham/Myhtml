@@ -1,0 +1,316 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      .main {
+        width: 1000px;
+        height: 540px;
+        background: #ec1707;
+      }
+      .row1 {
+        width: 1000px;
+        height: 100px;
+        background: #e91e63;
+        font-size: 50px;
+        text-align: center;
+      }
+      .row2 {
+        width: 1000px;
+        height: 40px;
+        background: #9c27b0;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+      }
+      .row2-col1 {
+        width: 200px;
+        height: 40px;
+        background-color: #673ab7;
+        float: left;
+      }
+      .row2-col2 {
+        width: 200px;
+        height: 40px;
+        background-color: #3f51b5;
+        float: left;
+      }
+      .row2-col3 {
+        width: 200px;
+        height: 40px;
+        background-color: aqua;
+        float: left;
+      }
+      .row2-col4 {
+        width: 200px;
+        height: 40px;
+        background-color: #2196f3;
+        float: left;
+      }
+      .row2-col5 {
+        width: 200px;
+        height: 40px;
+        background-color: #ffc107;
+        float: left;
+      }
+      .row3 {
+        width: 1000px;
+        height: 200px;
+        background-color: #9e9e9e;
+      }
+      .row3-col1 {
+        width: 250px;
+        height: 200px;
+        background-color: #ffeb3b;
+        float: left;
+        text-align: center;
+        font-size: 25px;
+      }
+      .row3-col2 {
+        width: 750px;
+        height: 200px;
+        background-color: rgb(131, 239, 9);
+        float: left;
+      }
+      .row3-col1-row1 {
+        width: 250px;
+        height: 40px;
+        background-color: lightseagreen;
+      }
+      .row3-col1-row2 {
+        width: 250px;
+        height: 40px;
+        background-color: darkcyan;
+      }
+      .row3-col1-row3 {
+        width: 250px;
+        height: 40px;
+        background-color: teal;
+      }
+      .row3-col1-row4 {
+        width: 250px;
+        height: 40px;
+        background-color: lightseagreen;
+      }
+      .row3-col1-row5 {
+        width: 250px;
+        height: 40px;
+        background-color: mediumaquamarine;
+      }
+      .row4 {
+        width: 1000px;
+        height: 100px;
+        background-color: chartreuse;
+        color: white;
+        font-size: 50px;
+        text-align: center;
+      }
+      .row5 {
+        width: 1000px;
+        height: 10px;
+      }
+      .row5-col1 {
+        width: 330px;
+        height: 100px;
+        float: left;
+      }
+      .row5-col2 {
+        width: 330px;
+        height: 100px;
+        float: left;
+      }
+      .row5-col3 {
+        width: 330px;
+        height: 100px;
+        float: left;
+      }
+      .row6 {
+        width: 1000px;
+        height: 50px;
+        text-align: center;
+        font-size: 30px;
+        background-color: chocolate;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="row1">Welcome To Wscube Tech</div>
+      <div class="row2">
+        <div class="row2-col1">Home</div>
+        <div class="row2-col2">About</div>
+        <div class="row2-col3">Courses</div>
+        <div class="row2-col4">Gallery</div>
+        <div class="row2-col5">Contact</div>
+      </div>
+      <div class="row3">
+        <div class="row3-col1">
+          <div class="row3-col1-row1">Home</div>
+          <div class="row3-col1-row2">About</div>
+          <div class="row3-col1-row3">Courses</div>
+          <div class="row3-col1-row4">Gallery</div>
+          <div class="row3-col1-row5">Contact</div>
+        </div>
+        <div class="row3-col2">
+          <img src="3.jpeg" alt="" width="750px" height="200px" />
+        </div>
+      </div>
+      <div class="row4">Our Clients</div>
+      <div class="row5">
+        <div class="row5-col1">
+          <img src="th (15).jpeg" alt="" width="330px" height="100px" />
+        </div>
+        <div class="row5-col2">
+          <img src="th (16).jpeg" alt="" width="330px" height="100px" />
+        </div>
+        <div class="row5-col3">
+          <img src="th (18).jpeg" alt="" width="330px" height="100px" />
+        </div>
+      </div>
+      <div class="row6">Home|About|Course|Gallery|Contact</div>
+    </div>
+  </body>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .main {
+            max-width: 1000px;
+            margin: auto;
+            background: #ec1707;
+            color: white;
+        }
+        .row1 {
+            height: 100px;
+            background: #e91e63;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px; /* Center text vertically */
+        }
+        .row2 {
+            height: 40px;
+            background: #9c27b0;
+            text-align: center;
+            font-size: 25px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .row2 div {
+            flex: 1;
+            background-color: #673ab7; /* Default color, can be overridden */
+            height: 100%; /* Full height */
+            line-height: 40px; /* Center text vertically */
+            transition: background-color 0.3s;
+        }
+        .row2 div:hover {
+            background-color: #3f51b5; /* Change on hover */
+        }
+        .row3 {
+            height: 200px;
+            background-color: #9e9e9e;
+            display: flex;
+        }
+        .row3-col1 {
+            width: 250px;
+            background-color: #ffeb3b;
+            text-align: center;
+            font-size: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+        .row3-col1 div {
+            height: 40px;
+            background-color: lightseagreen;
+            line-height: 40px; /* Center text vertically */
+            transition: background-color 0.3s;
+        }
+        .row3-col1 div:nth-child(2) { background-color: darkcyan; }
+        .row3-col1 div:nth-child(3) { background-color: teal; }
+        .row3-col1 div:nth-child(4) { background-color: lightseagreen; }
+        .row3-col1 div:nth-child(5) { background-color: mediumaquamarine; }
+        .row3-col2 {
+            flex-grow: 1; /* Take remaining space */
+            display: flex;
+            align-items: center; /* Center the image vertically */
+            justify-content: center; /* Center the image horizontally */
+        }
+        .row4 {
+            height: 100px;
+            background-color: chartreuse;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px; /* Center text vertically */
+        }
+        .row5 {
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+        }
+        .row5 div {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .row5 img {
+            max-width: 100%; /* Responsive images */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .row6 {
+            height: 50px;
+            text-align: center;
+            font-size: 30px;
+            background-color: chocolate;
+            line-height: 50px; /* Center text vertically */
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="row1">Welcome To Wscube Tech</div>
+        <div class="row2">
+            <div>Home</div>
+            <div>About</div>
+            <div>Courses</div>
+            <div>Gallery</div>
+            <div>Contact</div>
+        </div>
+        <div class="row3">
+            <div class="row3-col1">
+                <div>Home</div>
+                <div>About</div>
+                <div>Courses</div>
+                <div>Gallery</div>
+                <div>Contact</div>
+            </div>
+            <div class="row3-col2">
+                <img src="3.jpeg" alt="Main image" width="750px" height="200px" />
+            </div>
+        </div>
+        <div class="row4">Our Clients</div>
+        <div class="row5">
+            <div><img src="th (15).jpeg" alt="Client 1" /></div>
+            <div><img src="th (16).jpeg" alt="Client 2" /></div>
+            <div><img src="th (18).jpeg" alt="Client 3" /></div>
+        </div>
+        <div class="row6">Home | About | Course | Gallery | Contact</div>
+    </div>
+</body>
+</html>
+

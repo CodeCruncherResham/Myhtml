@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript in Head and Body</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 1rem;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        hr {
+            margin: 20px 0;
+        }
+    </style>
+    <script>
+        function changeHeadParagraph() {
+            document.getElementById("demo-head").innerHTML = "Head Paragraph Changed";
+        }
+        function changeBodyParagraph() {
+            document.getElementById("demo-body").innerHTML = "Body Paragraph Changed";
+        }
+    </script>
+</head>
+<body>
+    <h2>Demo: JavaScript in Head</h2>
+    <p id="demo-head">This is the original head paragraph.</p>
+    <button type="button" onclick="changeHeadParagraph()">Change Head Paragraph</button>
+    
+    <hr>
+
+    <h2>Demo: JavaScript in Body</h2>
+    <p id="demo-body">This is the original body paragraph.</p>
+    <button type="button" onclick="changeBodyParagraph()">Change Body Paragraph</button>
+    
+    <hr>
+
+    <h1>My First Web Page</h1>
+    <p>My first paragraph.</p>
+    <p id="html-element"></p>
+    
+    <hr>
+
+    <p id="testing-purpose"></p>
+    
+    <script>
+        // Update the content of the paragraph using JS
+        document.getElementById("testing-purpose").innerHTML = "The sum of 5 + 6 is: " + (5 + 6);
+        // Output to the document
+        document.write("<p>The sum of 5 + 6 is: " + (5 + 6) + "</p>");
+    </script>
+</body>
+</html>

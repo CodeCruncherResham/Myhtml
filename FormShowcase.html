@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Form Showcase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    fieldset {
+      margin-top: 20px;
+      padding: 15px;
+    }
+    legend {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML Form Showcase</h1>
+
+  <form action="/submit.html" method="POST" enctype="multipart/form-data" target="_blank" autocomplete="on" novalidate>
+
+    <!-- Basic Inputs -->
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required minlength="3" maxlength="50" />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required pattern=".{6,}" title="Minimum 6 characters" />
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" />
+
+    <label for="website">Website:</label>
+    <input type="url" id="website" name="website" placeholder="https://example.com" />
+
+    <!-- Radio Buttons -->
+    <fieldset>
+      <legend>Gender:</legend>
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label><br />
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label><br />
+      <input type="radio" id="other" name="gender" value="other" />
+      <label for="other">Other</label>
+    </fieldset>
+
+    <!-- Checkboxes -->
+    <fieldset>
+      <legend>Skills:</legend>
+      <input type="checkbox" id="html" name="skills" value="HTML" />
+      <label for="html">HTML</label><br />
+      <input type="checkbox" id="css" name="skills" value="CSS" />
+      <label for="css">CSS</label><br />
+      <input type="checkbox" id="js" name="skills" value="JavaScript" />
+      <label for="js">JavaScript</label>
+    </fieldset>
+
+    <!-- Select -->
+    <label for="country">Country:</label>
+    <select id="country" name="country" required>
+      <option value="">--Select--</option>
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+      <option value="UK">UK</option>
+    </select>
+
+    <!-- Textarea -->
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" rows="5" placeholder="Type here..."></textarea>
+
+    <!-- File Upload -->
+    <label for="resume">Upload Resume:</label>
+    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" />
+
+    <!-- Range -->
+    <label for="experience">Experience (Years):</label>
+    <input type="range" id="experience" name="experience" min="0" max="20" />
+
+    <!-- Number -->
+    <label for="quantity">How many projects have you done?</label>
+    <input type="number" id="quantity" name="projects" min="1" max="100" step="1" />
+
+    <!-- Hidden Input -->
+    <input type="hidden" name="form_id" value="form_001" />
+
+    <!-- Submit Buttons -->
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+  </form>
+
+</body>
+</html>

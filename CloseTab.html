@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            margin-bottom: 10px;
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            width: 33.33%; /* Equal width for each tab */
+        }
+        .tab button:hover {
+            background-color: #ddd;
+        }
+        .tab button.active {
+            background-color: palevioletred;
+            color: white; /* Improved contrast */
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-top: none;
+            background-color: white;
+        }
+        .close-btn {
+            cursor: pointer;
+            color: red;
+            float: right;
+            font-size: 20px;
+            line-height: 20px;
+            padding: 0 5px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Tabbed Interface</h2>
+    <p>Click on the buttons inside the tabbed menu:</p>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+    </div> 
+
+    <div id="London" class="tabcontent">
+        <h3>London</h3>
+        <p>London is the capital city of England.</p>
+        <span class="close-btn" onclick="closeTab('London')">x</span>
+    </div>
+    <div id="Paris" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital city of France.</p>
+        <span class="close-btn" onclick="closeTab('Paris')">x</span>
+    </div>
+    <div id="Tokyo" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital city of Japan.</p>
+        <span class="close-btn" onclick="closeTab('Tokyo')">x</span>
+    </div>
+
+    <script>
+        function openCity(evt, cityName) {
+            // Hide all tab content
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the "active" class from all tab links
+            var tablinks = document.getElementsByClassName("tablinks");
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Show the selected tab content and add "active" class to the clicked button
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }
+
+        function closeTab(cityName) {
+            // Hide the selected tab content
+            document.getElementById(cityName).style.display = "none";
+
+            // Remove the active class from the tab link
+            var tablinks = document.getElementsByClassName("tablinks");
+            for (var i = 0; i < tablinks.length; i++) {
+                if (tablinks[i].innerText === cityName) {
+                    tablinks[i].classList.remove("active");
+                }
+            }
+        }
+
+        // Open the default tab on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("defaultOpen").click();
+        });
+    </script>
+
+</body>
+</html>

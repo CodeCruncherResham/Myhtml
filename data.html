@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #output {
+            font-size: 2rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        class Data {
+            show() {
+                // Append text to the output div instead of using document.write
+                const outputDiv = document.getElementById("output");
+                outputDiv.textContent = "Resham";
+            }
+        }
+
+        // Create an instance of Data and call the show method
+        const k = new Data();
+        k.show();
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Input</title>
+    <style>
+        body {
+            background: #f0f0f0; /* Fallback background color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .input-holder {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            text-align: center;
+        }
+        .input-holder h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #4caf50;
+        }
+        .input-holder input {
+            width: calc(100% - 20px); /* Adjust for padding */
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 2px solid #ccc;
+            outline: none;
+            color: #fff;
+            background: #333;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+        .input-holder input:focus {
+            border-color: #4caf50;
+            background: #444;
+        }
+        .input-group {
+            position: relative;
+        }
+        .input-group img {
+            width: 24px;
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+        }
+        .input-group input {
+            padding-left: 40px; /* Adjusted padding for icon */
+        }
+        /* Responsive styling */
+        @media (max-width: 480px) {
+            .input-holder {
+                width: 90%;
+                padding: 15px;
+            }
+            .input-group img {
+                width: 20px;
+                left: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="input-holder">
+        <h2>Register Here</h2>
+        <input type="text" class="input-1" placeholder="Full Name" aria-label="Full Name">
+        <input type="email" class="input-2" placeholder="Email" aria-label="Email">
+        <input type="email" class="input-3" placeholder="Confirm Email" aria-label="Confirm Email">
+        <div class="input-group">
+            <img src="./css1.jpg" alt="User Icon" width="10px" height="10px">
+            <input type="text" placeholder="Username" aria-label="Username">
+        </div>
+        <input type="button" value="Submit" style="background-color: #4caf50; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
+    </div>
+</body>
+</html>

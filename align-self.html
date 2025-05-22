@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Layout Example</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4; /* Light background for better contrast */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: #fff; /* White background for the container */
+            margin: auto;
+            padding: 20px;
+            border: 3px solid #000; /* Solid border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+            height: 400px;
+            display: flex;
+            align-items: flex-start; /* Align items to the start */
+            justify-content: space-around; /* Space out items evenly */
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+        }
+        .items {
+            background: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px; /* Increased padding for a better touch area */
+            margin: 5px;
+            text-align: center;
+            border-radius: 5px; /* Rounded corners for items */
+            transition: transform 0.3s; /* Smooth scaling on hover */
+        }
+
+        .item1 {
+            background: orangered;
+            align-self: flex-end; /* Align this item to the bottom */
+        }
+        .item2 {
+            background: yellowgreen;
+        }
+        .item3 {
+            background: mediumpurple;
+        }
+        .item4 {
+            background: hotpink;
+        }
+
+        /* Hover effect */
+        .items:hover {
+            transform: scale(1.05); /* Slightly scale up on hover */
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .items {
+                flex: 1 1 45%; /* Items take 45% of width */
+                margin: 10px; /* Adjust margin for smaller screens */
+            }
+        }
+
+        @media (max-width: 400px) {
+            .items {
+                flex: 1 1 100%; /* Stack items on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center; color: #333;">Flexbox Layout Example</h1>
+    <div class="container">
+        <div class="items item1">Item One</div>
+        <div class="items item2">Item Two</div>
+        <div class="items item3">Item Three</div>
+        <div class="items item4">Item Four</div>
+    </div>
+</body>
+</html>

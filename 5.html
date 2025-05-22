@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar Elements</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        fieldset {
+            border: 2px solid #007BFF; 
+            border-radius: 8px;
+            padding: 20px; 
+            background-color: #ffffff; 
+        }
+        legend {
+            font-weight: bold; 
+            color: #007BFF; 
+        }
+        label {
+            margin-right: 10px; 
+        }
+        input[type="date"],
+        input[type="datetime-local"],
+        input[type="time"],
+        input[type="range"] {
+            margin-bottom: 15px; 
+            padding: 10px; 
+            width: 100%; 
+            max-width: 300px;
+            border: 1px solid #ccc; 
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Calendar</legend>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date"/>
+        <br/>
+
+        <label for="datetime-local">Date and Time:</label>
+        <input type="datetime-local" id="datetime-local" name="datetime-local"/>
+        <br/>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time"/>
+        <br/>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"/>
+        <br/>
+
+        <label for="range">Range:</label>
+        <input type="range" id="range" name="range"/>
+        <br/>
+    </fieldset>
+</body>
+</html>

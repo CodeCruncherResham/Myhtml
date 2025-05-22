@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4; /* Light background for contrast */
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: #ffffff; /* White background for the container */
+            width: 80%; /* Responsive width */
+            max-width: 600px; /* Max width for larger screens */
+            margin: 50px auto; /* Center the container */
+            padding: 20px;
+            border: 3px solid #2196F3; /* Accent border color */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+            display: flex; /* Flexbox layout */
+            flex-direction: column; /* Column layout */
+            gap: 10px; /* Space between items */
+        }
+        .item {
+            flex: 1; /* Flexible items */
+            padding: 20px; /* Padding inside each item */
+            color: white; /* Text color */
+            text-align: center; /* Center text */
+            border-radius: 8px; /* Rounded corners for items */
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+        }
+        .item:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+        .item1 { background: orangered; }
+        .item2 { background: yellowgreen; }
+        .item3 { background: mediumpurple; }
+        .item4 { background: hotpink; }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 100%; /* Full width on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">Item One</div>
+        <div class="item item2">Item Two</div>
+        <div class="item item3">Item Three</div>
+        <div class="item item4">Item Four</div>
+    </div>
+</body>
+</html>

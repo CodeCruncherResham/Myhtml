@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callout Message</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light background for contrast */
+        }
+
+        .callout {
+            position: fixed;
+            bottom: 35px;
+            right: 20px;
+            max-width: 300px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+            overflow: hidden; /* Ensure inner elements stay within */
+            animation: slideIn 0.5s ease; /* Slide-in animation */
+        }
+
+        .callout-header {
+            padding: 15px;
+            background-color: #555;
+            font-size: 20px;
+            color: white;
+            position: relative; /* For close button positioning */
+        }
+
+        .callout-container {
+            padding: 15px;
+            background-color: #fff; /* White background for contrast */
+            color: #333; /* Dark text color */
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.3s; /* Smooth color transition */
+        }
+
+        .closebtn:hover {
+            color: lightgrey;
+        }
+
+        /* Slide-in animation */
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="callout">
+        <div class="callout-header">
+            Callout Header
+            <span class="closebtn" onclick="this.parentElement.parentElement.style.display='none';">&times;</span>
+        </div>
+        <div class="callout-container">
+            <p>This is a callout message to grab the user's attention!</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Accordion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            font-size: 16px;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: background-color 0.4s, color 0.4s;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+        .active, .accordion:hover {
+            background-color: #ccc;
+            color: #000;
+        }
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h2>Responsive Animated Accordion</h2>
+    <p>Click on the buttons to open the collapsible content</p>
+    
+    <button class="accordion" aria-expanded="false">Section 1</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, ducimus!</p>
+    </div>
+
+    <button class="accordion" aria-expanded="false">Section 2</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, ducimus!</p>
+    </div>
+
+    <button class="accordion" aria-expanded="false">Section 3</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, ducimus!</p>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                var expanded = this.getAttribute("aria-expanded") === "true";
+
+                this.setAttribute("aria-expanded", !expanded);
+                
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

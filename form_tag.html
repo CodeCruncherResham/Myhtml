@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form tag</title>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+        <label for="">Name</label>
+        <input type="text" name="fname" value="" placeholder="enter your name">
+        <br><br>
+        <label for="">Password</label>
+        <input type="password" name=""><br><br>
+        <label for="">Gender</label>
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+<br><br>
+<label for="">Hobbies</label>
+<input type="checkbox" name="hobby" id="music">
+<label for="music">Music</label>
+<input type="checkbox" name="hobby" id="music">
+<label for="football">Football</label>
+<br><br>
+<label for="">Message</label>
+<textarea cols="60" rows="10">baba</textarea>
+<br><br>
+<label for="">Country</label>  
+<select name="" size="3" multiple>
+    <option value="in">India</option>
+    <option value="pk">Pakistan</option>
+    <option value="ne">Nepal</option>
+    <option value="cn" selected>China</option>
+
+</select><br><br>
+<label for="">Cars</label>
+<select>
+    <optgroup label="Toyota">
+        <option>Innova</option>
+        <option>Etios</option>
+        <option>Fortuner</option>
+    </optgroup>
+    <optgroup label="Renault">
+        <option>Kwid</option>
+        <option>Duster</option>
+        <option>Captur</option>
+    </optgroup>
+</select><br><br>
+<label for="">Cars</label>
+<input list="cars">
+<datalist id="cars">
+    <option value="Innova">
+        <option value="Kwid">
+        <option value="Etios">
+            <option value="Swift">
+                <option value="Duster">
+
+</datalist><br><br>
+<label for="">Upload File</label>
+<input type="file" accept="video/*" name=""><br><br>
+<input type="submit" value="save">
+<input type="reset"><br><br>
+<input type="image" src="img_path" width="20px" alt="submit button">
+</fieldset>
+  </form>
+</body>
+</html>

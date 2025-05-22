@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Calculations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #333;
+        }
+        .result {
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        hr {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Financial and Geometry Calculations</h2>
+    
+    <script>
+        // QUESTION 1: Area and Perimeter of Rectangle
+        var l = 4, b = 5, a, p;
+        a = l * b;
+        p = 2 * (l + b);
+        document.write("<div class='result'>Area of rectangle: " + a + "</div>");
+        document.write("<div class='result'>Perimeter of rectangle: " + p + "</div>");
+        document.write("<hr>");
+        
+        // QUESTION 2: Total Price with Discount
+        var p1 = 100, p2 = 200, p3 = 300, t, d, a;
+        t = p1 + p2 + p3;
+        d = (t * 10) / 100;
+        a = t - d;
+        document.write("<div class='result'>Total Price: " + t + "</div>");
+        document.write("<div class='result'>Discount: " + d + "</div>");
+        document.write("<div class='result'>Price to Pay: " + a + "</div>");
+        document.write("<hr>");
+        
+        // QUESTION 3: Gross Salary Calculation
+        var sal = 5000, hra, da, gs;
+        hra = sal * 20 / 100;
+        da = sal * 40 / 100;
+        gs = sal + hra + da;
+        document.write("<div class='result'>Gross Salary: " + gs + "</div>");
+        document.write("<hr>");
+        
+        // QUESTION 4: Marks Percentage Calculation
+        var m1 = 70, m2 = 70, m3 = 80, m4 = 80, m5 = 30, t, p;
+        t = m1 + m2 + m3 + m4 + m5;
+        p = (t * 100) / 500;
+        document.write("<div class='result'>Total Marks: " + t + "</div>");
+        document.write("<div class='result'>Percentage: " + p + "%</div>");
+        document.write("<hr>");
+        
+        // QUESTION 5: Actual Price Calculation After Discounts
+        var p1 = 100, p2 = 200, p3 = 30, d1, d2, d3, a;
+        d1 = p1 * 10 / 100;
+        d2 = p2 * 20 / 100;
+        d3 = p3 * 30 / 100;
+        a = (p1 + p2 + p3) - (d1 + d2 + d3);
+        document.write("<div class='result'>Actual Price: " + a + "</div>");
+        document.write("<hr>");
+        
+        // QUESTION 6: Currency Conversion
+        var rs = 1000, dollar, dinar;
+        dollar = rs / 82.55;
+        dinar = rs / 267;
+        document.write("<div class='result'>Dollar: " + dollar.toFixed(2) + "</div>");
+        document.write("<div class='result'>Dinar: " + dinar.toFixed(2) + "</div>");
+    </script>
+</body>
+</html>

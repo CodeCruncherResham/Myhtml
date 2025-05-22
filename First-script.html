@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        img {
+            margin-top: 10px;
+            transition: opacity 0.5s;
+        }
+        #demo, #demo1 {
+            margin: 20px 0;
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- First Practice -->
+    <h2>My First JavaScript</h2>
+    <button type="button" onclick="displayDate()">Click me to display Date and Time</button>
+    <button type="button" onclick="changeFontSize()">JavaScript can change HTML styles</button>
+    <button type="button" onclick="hideElement()">JavaScript can hide HTML elements</button>
+    <button type="button" onclick="showElement()">JavaScript can show HTML elements</button>
+
+    <p id="demo"></p>
+
+    <hr>
+
+    <!-- Second Practice -->
+    <h2>What Can JavaScript Do?</h2>
+    <p>JavaScript can change HTML attribute values.</p>
+    <p>In this case, JavaScript changes the value of the source attribute of an image.</p>
+    
+    <button type="button" onclick="changeImage('2.jpeg')">Turn on the light</button>
+    <img src="1.jpeg" alt="Light Off" id="myImage" style="width: 100px;">
+    <button type="button" onclick="changeImage('3.jpeg')">Turn off the light</button>
+
+    <hr>
+
+    <!-- Third Practice -->
+    <p id="demo1"></p>
+    <script>
+        document.getElementById("demo1").innerHTML = "This is the third part of practice.";
+    </script>
+
+    <script>
+        // Function to display current date and time
+        function displayDate() {
+            document.getElementById('demo').innerHTML = new Date().toString();
+        }
+
+        // Function to change font size of the demo paragraph
+        function changeFontSize() {
+            document.getElementById('demo').style.fontSize = '35px';
+        }
+
+        // Function to hide the demo paragraph
+        function hideElement() {
+            document.getElementById('demo').style.display = 'none';
+        }
+
+        // Function to show the demo paragraph
+        function showElement() {
+            document.getElementById('demo').style.display = 'block';
+        }
+
+        // Function to change the image source
+        function changeImage(imageSrc) {
+            const image = document.getElementById('myImage');
+            image.src = imageSrc;
+            image.alt = imageSrc === '2.jpeg' ? 'Light On' : 'Light Off'; // Change alt text based on the image
+        }
+    </script>
+
+</body>
+</html>

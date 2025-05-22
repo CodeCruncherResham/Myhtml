@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabbed Interface</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        height: 100%;
+        font-family: Arial, sans-serif;
+        margin: 0;
+      }
+
+      .tablinks {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 25%;
+      }
+      .tablinks:hover {
+        background-color: #777;
+      }
+      .tabcontent {
+        color: white;
+        display: none;
+        padding: 100px 20px;
+        height: 100%;
+      }
+      #Home{background-color: red;}
+      #News{background-color: green;}
+      #About{background-color: blue;}
+      #Contact{background-color: orange;}
+    </style>
+  </head>
+  <body>
+    <h2>Tabbed Interface</h2>
+    <p>Click on the buttons inside the tabbed menu:</p>
+
+    <div class="tab">
+      <button
+        class="tablinks"
+        onclick="openPage('Home',this,'red')"
+        id="defaultOpen"
+      >
+        Home
+      </button>
+      <button class="tablinks" onclick="openPage( 'News',this,'green')">
+        News
+      </button>
+      <button class="tablinks" onclick="openPage( 'About',this,'blue')">
+        About
+      </button>
+      <button class="tablinks" onclick="openPage( 'Contact',this,'orange')">
+        Contact
+      </button>
+    </div>
+
+    <div id="Home" class="tabcontent">
+      <h3>Home</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+    <div id="News" class="tabcontent">
+      <h3>Paris</h3>
+      <p>Paris is the capital city of France.</p>
+    </div>
+    <div id="Contact" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital city of Japan.</p>
+    </div>
+
+    <div id="About" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital city of Japan.</p>
+    </div>
+
+    <script>
+      function openPage(pageName, elmnt, color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent / length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        WebTransportBidirectionalStream =
+          document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks / length; i++) {
+          tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+      }
+      document.getElementById("defaultOpen").click();
+    </script>
+  </body>
+</html>
