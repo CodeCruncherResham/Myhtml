@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Set Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h1 {
+            color: #007bff;
+        }
+        .output {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Set Example</h1>
+    <p>This example demonstrates how to use the <strong>Set</strong> object in JavaScript to store unique values.</p>
+    
+    <div class="output" id="output"></div>
+
+    <script>
+        // Creating a new Set to hold unique values
+        var students = new Set();
+
+        // Adding student names to the Set
+        students.add("Resham");
+        students.add("Saziya");
+        students.add("Tanya");
+
+        // Displaying the values in the Set
+        students.forEach(function(value) {
+            document.getElementById("output").innerHTML += value + "<br>";
+        });
+    </script>
+
+</body>
+</html>
+

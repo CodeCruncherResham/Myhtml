@@ -1,0 +1,289 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fe6c9e;
+            font-family: 'Poppins', sans-serif;
+        }
+        .signup_box {
+            background-color: #FFB6C1;
+            display: flex;
+            width: 65%;
+            height: 600px;
+            overflow: hidden;
+        }
+        .left_side {
+            width: 50%;
+            height: 100%;
+        }
+        .left_side img {
+            width: 50%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .right_side {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+        }
+        .right_side form {
+            width: 70%;
+        }
+        .right_side h1 {
+            margin-bottom: 5%;
+            letter-spacing: 2px;
+            font-size: 40px;
+            color: #FF007F;
+        }
+        .right_side form input, .btn {
+            width: 100%;
+            outline: none;
+            padding: 9px 12px;
+            margin: 8px 0;
+            border: none;
+            font-size: 16px;
+        }
+        .btn {
+            background-color: #FF007F;
+            color: aliceblue;
+            cursor: pointer;
+            font-size: 23px; 
+        }
+        .btn:hover {
+            background-color: #fe6c9e;
+            transition: 0.5s;
+            letter-spacing: 2px;
+        }
+        .icons {
+            margin-top: 2%;
+        }
+        .icons h4 {
+            text-align: center;
+            padding-top: 3%;
+            letter-spacing: 1px;
+        }
+        .icons h4 span {
+            color: #FF007F;
+        }
+        .icons i {
+            padding: 15px 10px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .icons i:hover {
+            color: #FF007F;  
+        }
+    </style>
+</head>
+<body>
+    <div class="signup_box">
+        <div class="left_side">
+            <img src="Saved Pictures/about.jpg" alt="Image">
+        </div>
+        <div class="right_side">
+            <h1>Sign Up</h1>
+            <form action="">
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="fname" placeholder="Father Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="text" name="address" placeholder="Address">
+                <input type="number" name="num" placeholder="Phone">
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <div class="icons">
+                <h4>or <span>Sign Up</span> Using</h4>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fe6c9e;
+            font-family: 'Poppins', sans-serif;
+        }
+        .signup_box {
+            background-color: #FFB6C1;
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            height: 600px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .left_side {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .left_side img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .right_side {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+            padding: 20px;
+        }
+        .right_side h1 {
+            margin-bottom: 5%;
+            letter-spacing: 2px;
+            font-size: 40px;
+            color: #FF007F;
+            text-align: center;
+        }
+        .right_side form {
+            width: 100%;
+        }
+        .right_side form input, .btn {
+            width: 100%;
+            outline: none;
+            padding: 12px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .btn {
+            background-color: #FF007F;
+            color: aliceblue;
+            cursor: pointer;
+            font-size: 23px; 
+            transition: background-color 0.5s, letter-spacing 0.5s;
+        }
+        .btn:hover {
+            background-color: #fe6c9e;
+            letter-spacing: 2px;
+        }
+        .icons {
+            margin-top: 2%;
+            text-align: center;
+        }
+        .icons h4 {
+            padding-top: 3%;
+            letter-spacing: 1px;
+        }
+        .icons h4 span {
+            color: #FF007F;
+        }
+        .icons i {
+            padding: 15px 10px;
+            font-size: 25px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .icons i:hover {
+            color: #FF007F;  
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .signup_box {
+                flex-direction: column;
+                height: auto;
+            }
+            .left_side, .right_side {
+                width: 100%;
+                height: auto;
+            }
+            .right_side h1 {
+                font-size: 32px;
+            }
+            .btn {
+                font-size: 20px; 
+            }
+            .icons i {
+                font-size: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .right_side h1 {
+                font-size: 28px;
+            }
+            .btn {
+                font-size: 18px; 
+            }
+            .icons i {
+                font-size: 18px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="signup_box">
+        <div class="left_side">
+            <img src="Saved Pictures/about.jpg" alt="Image">
+        </div>
+        <div class="right_side">
+            <h1>Sign Up</h1>
+            <form action="">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="text" name="fname" placeholder="Father Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="address" placeholder="Address" required>
+                <input type="number" name="num" placeholder="Phone" required>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <div class="icons">
+                <h4>or <span>Sign Up</span> Using</h4>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-whatsapp"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

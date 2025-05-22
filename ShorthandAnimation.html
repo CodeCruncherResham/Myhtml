@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f8f9fa; /* Light background for contrast */
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .animation-box {
+            width: 100px;
+            height: 100px;
+            background-color: palegreen;
+            position: relative;
+            animation-name: shorthand;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            margin: 20px auto; /* Center the div */
+        }
+
+        @keyframes shorthand {
+            0% {
+                background-color: palegreen;
+                left: 0;
+                top: 0;
+            }
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0;
+            }
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+            100% {
+                background-color: green;
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Animation Example</h1>
+    <p>This example uses six animation properties:</p>
+    <ul style="list-style-type: none; padding: 0;">
+        <li>1. <b>animation-name</b></li>
+        <li>2. <b>animation-duration</b></li>
+        <li>3. <b>animation-timing-function</b></li>
+        <li>4. <b>animation-delay</b></li>
+        <li>5. <b>animation-iteration-count</b></li>
+        <li>6. <b>animation-direction</b></li>
+    </ul>
+    <div class="animation-box"></div>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DreamHome Realty</title>
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f7f9fc;
+      color: #333;
+      line-height: 1.5;
+    }
+    a {
+      text-decoration: none;
+      color: #1a73e8;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #0b4ea2;
+    }
+    header {
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 28px;
+      color: #1a73e8;
+      letter-spacing: 1.2px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin-left: 30px;
+      font-weight: 600;
+    }
+    /* Hero Section */
+    #hero {
+      background: url('https://images.unsplash.com/photo-1560185127-5b971c15b24e?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+    }
+    #hero::after {
+      content: "";
+      position: absolute;
+      top:0; left:0; right:0; bottom:0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+    #hero .content {
+      position: relative;
+      max-width: 700px;
+      z-index: 1;
+    }
+    #hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      letter-spacing: 1.5px;
+    }
+    #hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+    #hero form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    #hero input, #hero select {
+      padding: 15px 18px;
+      border-radius: 8px;
+      border: none;
+      width: 180px;
+      font-size: 1rem;
+    }
+    #hero button {
+      background: #1a73e8;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    #hero button:hover {
+      background: #0b4ea2;
+    }
+    /* Featured Listings */
+    #featured {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    #featured h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+      color: #1a73e8;
+      font-weight: 700;
+    }
+    .listings {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 30px;
+    }
+    .listing {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .listing:hover {
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .listing img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .listing-content {
+      padding: 15px 20px;
+    }
+    .listing-content h3 {
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #0b4ea2;
+    }
+    .listing-content p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 12px;
+    }
+    .price {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #1a73e8;
+    }
+    /* Services Section */
+    #services {
+      background: #f0f4ff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    #services h2 {
+      color: #1a73e8;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+    .services-list {
+      display: flex;
+      max-width: 900px;
+      margin: auto;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .service {
+      background: white;
+      border-radius: 12px;
+      padding: 30px 25px;
+      width: 250px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+    .service:hover {
+      transform: translateY(-8px);
+    }
+    .service-icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #1a73e8;
+    }
+    .service h3 {
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #0b4ea2;
+    }
+    .service p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.4;
+    }
+    /* About Us */
+    #about {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    #about img {
+      width: 450px;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+    #about-content {
+      flex: 1;
+    }
+    #about-content h2 {
+      font-size: 2.5rem;
+      color: #1a73e8;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+    #about-content p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+    #about-content a {
+      font-weight: 700;
+      background: #1a73e8;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+    #about-content a:hover {
+      background: #0b4ea2;
+    }
+    /* Footer */
+    footer {
+      background: #1a73e8;
+      color: white;
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 14px;
+      letter-spacing: 0.7px;
+      margin-top: 60px;
+    }
+    /* Responsive */
+    @media (max-width: 900px) {
+      #about {
+        flex-direction: column;
+        text-align: center;
+      }
+      #about-content {
+        max-width: 500px;
+        margin: auto;
+      }
+      #about img {
+        margin-bottom: 30px;
+      }
+      .services-list {
+        flex-direction: column;
+        width: 100%;
+      }
+      .service {
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">DreamHome Realty</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#featured">Listings</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="hero">
+  <div class="content">
+    <h1>Find Your Dream Home</h1>
+    <p>Search the best properties available in your area.</p>
+    <form>
+      <input type="text" placeholder="Location, city, or zip" required />
+      <select>
+        <option value="" disabled selected>Property Type</option>
+        <option>House</option>
+        <option>Apartment</option>
+        <option>Condo</option>
+        <option>Townhouse</option>
+      </select>
+      <select>
+        <option value="" disabled selected>Max Price</option>
+        <option>$100,000</option>
+        <option>$250,000</option>
+        <option>$500,000</option>
+        <option>$1,000,000+</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</section>
+
+<section id="featured">
+  <h2>Featured Listings</h2>
+  <div class="listings">
+    <div class="listing">
+      <img src="https://images.unsplash.com/photo-1572120360610-d971b9b3f113?auto=format&fit=crop&w=600&q=80" alt="Modern House" />
+      <div class="listing-content">
+        <h3>Modern Family House</h3>
+        <p>4 beds · 3 baths · 2500 sq ft</p>
+        <div class="price">$450,000</div>
+      </div>
+    </div>
+    <div class="listing">
+      <img src="https://images.unsplash.com/photo-1600585153983-d2c3b6d9fc3a?auto=format&fit=crop&w=600&q=80" alt="Luxury Condo" />
+      <div class="listing-content">
+        <h3>Luxury Condo Downtown</h3>
+        <p>2 beds · 2 baths · 1300 sq ft</p>
+        <div class="price">$650,000</div>
+      </div>
+    </div>
+    <div class="listing">
+      <img src="https://images.unsplash.com/photo-1600585154297-8e3e7cc4042a?auto=format&fit=crop&w=600&q=80" alt="Cozy Cottage" />
+      <div class="listing-content">
+        <h3>Cozy Cottage</h3>
+        <p>3 beds · 2 baths · 1400 sq ft</p>
+        <div class="price">$320,000</div>
+      </div>
+    </div>
+    <div class="listing">
+      <img src="https://images.unsplash.com/photo-1572120360557-5a0b1b2b4d94?auto=format&fit=crop&w=600&q=80" alt="Suburban Home" />
+      <div class="listing-content">
+        <h3>Suburban Family Home</h3>
+        <p>5 beds · 4 baths · 3000 sq ft</p>
+        <div class="price">$530,000</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services-list">
+    <div class="service">
+      <div class="service-icon">🏠</div>
+      <h3>Property Buying</h3>
+      <p>Find and buy the perfect home with our expert assistance.</p>
+    </div>
+    <div class="service">
+<div class="service-icon">🔑</div>
+<h3>Property Selling</h3>
+<p>Get the best price for your property with our professional marketing.</p>
+</div>
+<div class="service">
+<div class="service-icon">📋</div>
+<h3>Consultation</h3>
+<p>Personalized real estate advice tailored to your needs.</p>
+</div>
+
+</div> </section> <section id="about" class="container"> <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=700&q=80" alt="About DreamHome" /> <div id="about-content"> <h2>About DreamHome Realty</h2> <p>We have helped thousands of families find their perfect home since 2005. Our dedicated agents provide personalized service to make your real estate journey smooth and enjoyable.</p> <a href="#contact">Get in Touch</a> </div> </section> <footer> &copy; 2025 DreamHome Realty. All rights reserved. </footer> </body> </html> ```

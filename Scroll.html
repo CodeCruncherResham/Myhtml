@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Into View Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        #myDiv {
+            height: 250px;
+            width: 100%;
+            overflow: auto;
+            background: coral;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        #content {
+            height: 800px;
+            width: 100%;
+            background-color: coral;
+            margin-top: 20px; /* Added margin to visually separate content */
+        }
+        h1, h2 {
+            color: #333;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Element Object</h1>
+    <h2>The scrollIntoView() Method</h2>
+    <button onclick="myFunction()">Scroll to Content</button>
+    <p>Click "Scroll" to scroll to the top of the element with id="content".</p>
+    <div id="myDiv">
+        <div id="content">
+            <p>Some text inside an element</p>
+            <p>Some text inside an element</p>
+            <p>Some text inside an element</p>
+            <p>Some additional content to ensure scrolling...</p>
+            <p>Some additional content to ensure scrolling...</p>
+            <p>Some additional content to ensure scrolling...</p>
+            <p>Some additional content to ensure scrolling...</p>
+            <p>Some additional content to ensure scrolling...</p>
+            <p>Some additional content to ensure scrolling...</p>
+            <p>Some additional content to ensure scrolling...</p>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            const element = document.getElementById("content");
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    </script>
+</body>
+</html>

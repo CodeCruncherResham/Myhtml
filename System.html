@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Comparison, Grading, and Billing System</title>
+   <style>
+       body {
+           font-family: Arial, sans-serif;
+           padding: 20px;
+           background-color: #f9f9f9;
+       }
+       h2 {
+           color: #333;
+       }
+       .result {
+           font-weight: bold;
+           color: green;
+       }
+       .error {
+           font-weight: bold;
+           color: red;
+       }
+   </style>
+</head>
+<body>
+   <h2>Comparison, Grading, and Billing System</h2>
+   <script>
+       // Part 1: Comparison of Three Numbers
+       var a = parseInt(prompt("Enter first number:"));
+       var b = parseInt(prompt("Enter second number:"));
+       var c = parseInt(prompt("Enter third number:"));
+
+       if (a > b && a > c) {
+           document.write("<p class='result'>A is greater than B and C.</p>");
+       } else if (b > a && b > c) {
+           document.write("<p class='result'>B is greater than A and C.</p>");
+       } else if (c > a && c > b) {
+           document.write("<p class='result'>C is greater than A and B.</p>");
+       } else {
+           document.write("<p class='error'>Two or more numbers are equal or invalid input.</p>");
+       }
+
+       document.write("<br>");
+
+       // Part 2: Grading System
+       var m1 = parseInt(prompt("Enter marks for subject 1:"));
+       var m2 = parseInt(prompt("Enter marks for subject 2:"));
+       var m3 = parseInt(prompt("Enter marks for subject 3:"));
+       var totalMarks = m1 + m2 + m3;
+       var percentage = (totalMarks * 100) / 300;
+
+       if (percentage >= 75 && percentage <= 100) {
+           document.write("<p class='result'>Honours</p>");
+       } else if (percentage >= 60 && percentage < 75) {
+           document.write("<p class='result'>First Division</p>");
+       } else if (percentage >= 40 && percentage < 60) {
+           document.write("<p class='result'>Second Division</p>");
+       } else {
+           document.write("<p class='error'>Fail</p>");
+       }
+
+       document.write("<br>");
+
+       // Part 3: Electricity Bill Calculation
+       var unit = parseInt(prompt("Enter the number of units consumed:"));
+       var bill;
+
+       if (unit >= 1 && unit <= 100) {
+           bill = unit * 2;
+       } else if (unit >= 101 && unit <= 200) {
+           bill = unit * 3;
+       } else if (unit >= 201 && unit <= 300) {
+           bill = unit * 4;
+       } else if (unit >= 301 && unit <= 400) {
+           bill = unit * 5;
+       } else {
+           document.write("<p class='error'>Invalid input for units.</p>");
+       }
+
+       if (bill) {
+           document.write("<p class='result'>You have to pay: " + bill + " currency units.</p>");
+       }
+   </script>
+</body>
+</html>

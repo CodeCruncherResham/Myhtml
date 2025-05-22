@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    
+    <style>
+      
+      .header{
+        position: fixed;
+        background-color: aliceblue;
+        background-size: cover;
+        color: black;
+        font-family: sans-serif;
+        font-size: medium;
+        font-weight: normal;
+        width: 100%;
+        height: 100px;
+        float: left;
+        cursor: pointer;
+      } 
+     
+       .headerul{
+            display: inline-flex;
+            list-style: none;
+            color: black;
+            margin-left: 100px;
+        } 
+         .li{
+            width: 100%;
+            height:50px;
+            margin: 5px;
+            padding: 20px;
+            display: inline-block;
+            font-weight: bold;
+            
+        } 
+       .side1ul{
+            display: inline-flex;
+            list-style: none;
+            color: black;
+            margin-left: 600px;
+        }
+         .li:hover {    
+        background-color: green;
+        width: 100;
+        height: 10px;
+      }
+        .side2{
+          position: fixed;
+        background-color:black;
+        background-size: cover;
+        color: white;
+        font-family: sans-serif;
+        font-size: bold;
+        font-weight: medium;
+        width: 100%;
+        height: 50px;
+        float: left;
+        top: 100px;
+        cursor: pointer;
+        } 
+        .side2ul{
+            display: inline-flex;
+            list-style: none;
+            color:white;
+            margin-left: 50px;
+            margin-top: 1px;
+        }
+        .side2li{
+            width: 100%;
+            height:150px;
+            margin: 5px;
+            padding: 15px;
+            display: inline-block;
+        } 
+        .side2li:hover{
+          background-color: gray;
+          width: 70px;
+          height: 10px;
+        }
+        .side3{
+        height: 500px;
+        width: 15%;
+        position: fixed;
+        top: 145px;
+        left: 0px;
+        background-color: gray;
+        overflow: auto;
+        z-index: 2;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .style{
+        background-color:white;
+        color: black;
+         width: 100%;
+         height: 30px;
+         font-size: medium;
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+      .style:hover{
+        background-color: chartreuse;
+      }
+
+      .box {
+       position: fixed;
+        width: 85%;
+        height: 100%;
+        background-color:chartreuse;
+        margin-top: 142px;
+        margin-left: 220px;
+        z-index: 4;
+        float: left;
+      }
+      .p{
+        font-style: normal;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: x-large;
+        margin-left: 50px;
+        margin-top: 100px;
+      }
+     .btn{
+       width: 70px;
+        height: 45px; 
+        color: white; 
+        background-color: lightgreen;
+         margin-left: 55px;
+          font-weight: bold; 
+          font-family: 'Courier New', Courier, monospace;
+          font-size: x-large;
+     }
+     
+     
+    </style>
+ <!-- <img src="w3s.jpg" height="50px" class="img"> -->
+<div class="header">
+  <ul class="headerul">
+    <li class="li">Tutorials</li>
+    <li class="li">Exercises</li>
+    <li class="li">GetCertified</li>
+    <li class="li">Services</li>
+
+    <p class=" side1ul">
+    <input class="style" type="button" value="Sign Up" style="background-color: darkgreen;">
+    <input class="style" type ="button" value="Log in">
+    </p>
+
+  </ul>
+</div>
+
+<div class="side2">
+  <ul class="side2ul">
+    <li class="side2li">HTML</li>
+    <li class="side2li "> CSS</li>
+    <li class="side2li ">JAVASCRIPT</li>
+    <li class="side2li ">SQL</li>
+    <li class="side2li ">PYTHON</li>
+    <li class="side2li ">JAVA</li>
+    <li class="side2li ">PHP</li>
+    <li class="side2li ">C</li>
+    <li class="side2li ">C++</li>
+    <li class="side2li ">C#</li>
+    <li class="side2li ">GIT</li>
+    <li class="side2li ">NODEJS</li>
+    <li class="side2li ">ANGULAR</li>
+    <li class="side2li ">MONGODB</li>
+     <li class="side2li ">ASP</li>
+    <li class="side2li ">AWS</li>    
+</div>
+
+<div class="side3">
+  <ul>HTML TUTORIAL
+    <li>HTML Home</li>
+    <li>HTML Introduction</li>
+    <li>HTML Editors</li>
+    <li>HTML Basic</li>
+    <li>HTML Elements</li>
+    <li>HTML Attributes</li>
+    <li>HTML Headings</li>
+    <li>HTML Paragraphs</li>
+    <li>HTML Styles</li>
+    <li>HTML Formatting</li>
+    <li>HTML Quotations</li>
+    <li>HTML Comments</li>
+    <li>HTML Colors</li>
+    <li>HTML CSS</li>
+    <li>HTML Links</li>
+    <li>HTML Images</li>
+    <li>HTML Favicon</li>
+    <li>HTML Page Title</li>
+  </ul>
+      <ul>HTML FORMS
+        <li>HTML Forms</li>
+        <li>HTML Form Attribute</li>
+        <li>HTML Form Elements</li>
+        <li>HTML Input Types</li>
+        <li>HTML Input Attributes</li>
+        <li>HTML Input Form Attributes</li>
+      </ul>
+      <ul>HTML GRAPHICS
+      <li>HTML Canvas</li>
+      <li>HTML SVG</li>
+      </ul>
+      <ul>
+      <li>HTML MEDIA
+      <li>HTML Media</li>
+      <li>HTML Video</li>
+      <li>HTML Audio</li>
+      <li>HTML Plug-ins</li>
+      <li>HTML YouTube</li>
+      </ul>
+      <ul>HTML APIs
+      <li>HTML Geolocation</li>
+      <li>HTML Drag/Drop</li>
+      <li>HTML Web Storage</li>
+      <li>HTML Web Workers</li>
+      <li>HTML SSE</li>
+      </ul>
+      <ul>HTML EXAMPLES
+      <li>HTML Examples</li>
+      <li>HTML Editors</li>
+      <li>HTML Quiz</li>
+      <li>HTML Exercises</td>
+      </ul>    
+</div>
+
+  </body>
+</html>

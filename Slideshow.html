@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <style>
+        /* Apply box-sizing to all elements */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide slides initially */
+        .mySlides {
+            display: none;
+        }
+
+        /* Previous and next buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the next button to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* Hover effects for buttons */
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            text-align: center;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        }
+
+        /* The dots/circles below the slides */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        /* Highlight the active dot */
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation for slides */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        /* Keyframes for fade animation */
+        @keyframes fade {
+            from {
+                opacity: .4;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        let slideIndex = 1;  // Initialize the starting slide index
+
+        // Display the initial slide
+        showSlides(slideIndex);
+
+        // Function to navigate to the next/previous slide
+        function plusSlides(n) {
+            showSlides(slideIndex += n);  // Update slide index by adding n (1 or -1)
+        }
+
+        // Function to navigate to a specific slide
+        function currentSlide(n) {
+            showSlides(slideIndex = n);  // Set slide index to the clicked dot's index
+        }
+
+        // Function to show slides based on the current slide index
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+
+            // Loop back to the first slide if n exceeds the total number of slides
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+
+            // Loop back to the last slide if n is less than 1
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            // Hide all slides initially
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Remove the active class from all dots
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            // Display the current slide and add the active class to the corresponding dot
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Slide 1 -->
+        <div class="mySlides fade">
+            <div class="numbertext">1/3</div>
+            <img src="./images/6.jpeg" alt="Image 1" style="width: 100%;">
+            <div class="text">Caption Text 1</div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="mySlides fade">
+            <div class="numbertext">2/3</div>
+            <img src="./images/9.jpeg" alt="Image 2" style="width: 100%;">
+            <div class="text">Caption Text 2</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="mySlides fade">
+            <div class="numbertext">3/3</div>
+            <img src="./images/3.jpeg" alt="Image 3" style="width: 100%;">
+            <div class="text">Caption Text 3</div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+
+    <!-- Dots/circles below the slideshow -->
+    <br>
+    <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+</body>
+</html>
